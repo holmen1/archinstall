@@ -1,0 +1,345 @@
+Hardware model detected: Dell Inc. XPS 15 9500; UEFI mode: True
+Processor model detected: Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz
+    {
+        "children": [],
+        "fsavail": 0,
+        "fsroots": [
+            "."
+        ],
+        "fstype": "squashfs",
+        "fsuse_percentage": "100%",
+        "fsver": "4.0",
+        "log_sec": 512,
+        "mountpoint": "/run/archiso/airootfs",
+        "mountpoints": [
+            "/run/archiso/airootfs"
+        ],
+        "name": "loop0",
+        "partn": null,
+        "parttype": null,
+        "partuuid": null,
+        "path": "/dev/loop0",
+        "pkname": null,
+        "pttype": null,
+        "ptuuid": null,
+        "rota": false,
+        "size": "794 MiB",
+        "tran": null,
+        "type": "loop",
+        "uuid": null
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "fsavail": null,
+                "fsroots": [],
+                "fstype": "iso9660",
+                "fsuse_percentage": null,
+                "fsver": "Joliet Extension",
+                "log_sec": 512,
+                "mountpoint": null,
+                "mountpoints": [],
+                "name": "sda1",
+                "partn": 1,
+                "parttype": "0x0",
+                "partuuid": "f9f63ac3-01",
+                "path": "/dev/sda1",
+                "pkname": "sda",
+                "pttype": "dos",
+                "ptuuid": "f9f63ac3",
+                "rota": true,
+                "size": "953 MiB",
+                "tran": null,
+                "type": "part",
+                "uuid": "2024-10-01-04-30-02-00"
+            },
+            {
+                "children": [],
+                "fsavail": null,
+                "fsroots": [],
+                "fstype": "vfat",
+                "fsuse_percentage": null,
+                "fsver": "FAT32",
+                "log_sec": 512,
+                "mountpoint": null,
+                "mountpoints": [],
+                "name": "sda2",
+                "partn": 2,
+                "parttype": "0xef",
+                "partuuid": "f9f63ac3-02",
+                "path": "/dev/sda2",
+                "pkname": "sda",
+                "pttype": "dos",
+                "ptuuid": "f9f63ac3",
+                "rota": true,
+                "size": "165 MiB",
+                "tran": null,
+                "type": "part",
+                "uuid": "66FB-7ACA"
+            }
+        ],
+        "fsavail": null,
+        "fsroots": [],
+        "fstype": "iso9660",
+        "fsuse_percentage": null,
+        "fsver": "Joliet Extension",
+        "log_sec": 512,
+        "mountpoint": null,
+        "mountpoints": [],
+        "name": "sda",
+        "partn": null,
+        "parttype": null,
+        "partuuid": null,
+        "path": "/dev/sda",
+        "pkname": null,
+        "pttype": "dos",
+        "ptuuid": "f9f63ac3",
+        "rota": true,
+        "size": "59040 MiB",
+        "tran": "usb",
+        "type": "disk",
+        "uuid": "2024-10-01-04-30-02-00"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "fsavail": null,
+                "fsroots": [],
+                "fstype": "vfat",
+                "fsuse_percentage": null,
+                "fsver": "FAT32",
+                "log_sec": 512,
+                "mountpoint": null,
+                "mountpoints": [],
+                "name": "nvme0n1p1",
+                "partn": 1,
+                "parttype": "c12a7328-f81f-11d2-ba4b-00a0c93ec93b",
+                "partuuid": "bb5552bd-66a1-4463-9f50-51f76d426b8d",
+                "path": "/dev/nvme0n1p1",
+                "pkname": "nvme0n1",
+                "pttype": "gpt",
+                "ptuuid": "9d058d89-f6a2-444b-824c-6468e17f4980",
+                "rota": false,
+                "size": "1024 MiB",
+                "tran": "nvme",
+                "type": "part",
+                "uuid": "DBF2-93C8"
+            },
+            {
+                "children": [],
+                "fsavail": null,
+                "fsroots": [],
+                "fstype": "btrfs",
+                "fsuse_percentage": null,
+                "fsver": null,
+                "log_sec": 512,
+                "mountpoint": null,
+                "mountpoints": [],
+                "name": "nvme0n1p2",
+                "partn": 2,
+                "parttype": "4f68bce3-e8cd-4db1-96e7-fbcaf984b709",
+                "partuuid": "9f7933b8-2c26-4b70-bc01-e86e7f83dc29",
+                "path": "/dev/nvme0n1p2",
+                "pkname": "nvme0n1",
+                "pttype": "gpt",
+                "ptuuid": "9d058d89-f6a2-444b-824c-6468e17f4980",
+                "rota": false,
+                "size": "487360 MiB",
+                "tran": "nvme",
+                "type": "part",
+                "uuid": "8fd3dec5-139c-45b5-8848-771f4e9a9a27"
+            }
+        ],
+        "fsavail": null,
+        "fsroots": [],
+        "fstype": null,
+        "fsuse_percentage": null,
+        "fsver": null,
+        "log_sec": 512,
+        "mountpoint": null,
+        "mountpoints": [],
+        "name": "nvme0n1",
+        "partn": null,
+        "parttype": null,
+        "partuuid": null,
+        "path": "/dev/nvme0n1",
+        "pkname": null,
+        "pttype": "gpt",
+        "ptuuid": "9d058d89-f6a2-444b-824c-6468e17f4980",
+        "rota": false,
+        "size": "488386 MiB",
+        "tran": "nvme",
+        "type": "disk",
+        "uuid": null
+    }
+]
+-- Chosen configuration --
+{
+    "__separator__": null,
+    "additional-repositories": [],
+    "archinstall-language": "English",
+    "audio_config": {
+        "audio": "pipewire"
+    },
+    "bootloader": "Grub",
+    "config_version": "2.8.6",
+    "debug": false,
+    "disk_config": {
+        "config_type": "default_layout",
+        "device_modifications": [
+            {
+                "device": "/dev/nvme0n1",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "Boot",
+                            "ESP"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "ae2370d3-1d6d-4823-b753-9a48eecdda03",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 1
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [
+                            {
+                                "mountpoint": "/",
+                                "name": "@"
+                            },
+                            {
+                                "mountpoint": "/home",
+                                "name": "@home"
+                            },
+                            {
+                                "mountpoint": "/var/log",
+                                "name": "@log"
+                            },
+                            {
+                                "mountpoint": "/var/cache/pacman/pkg",
+                                "name": "@pkg"
+                            },
+                            {
+                                "mountpoint": "/.snapshots",
+                                "name": "@.snapshots"
+                            }
+                        ],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "btrfs",
+                        "mount_options": [
+                            "compress=zstd"
+                        ],
+                        "mountpoint": null,
+                        "obj_id": "47ab6444-0add-40b6-ba06-0d05202c0da1",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 511034351616
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1074790400
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            }
+        ]
+    },
+    "disk_encryption": null,
+    "hostname": "arch02",
+    "kernels": [
+        "linux",
+        "linux-lts"
+    ],
+    "locale_config": {
+        "kb_layout": "sv-latin1",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US"
+    },
+    "mirror_config": {
+        "custom_mirrors": [],
+        "mirror_regions": {
+            "Sweden": [
+                "https://mirror.osbeck.com/archlinux/$repo/os/$arch",
+                "http://mirror.accum.se/mirror/archlinux/$repo/os/$arch",
+                "https://ftp.myrveln.se/pub/linux/archlinux/$repo/os/$arch",
+                "https://mirror.accum.se/mirror/archlinux/$repo/os/$arch",
+                "http://mirror.bahnhof.net/pub/archlinux/$repo/os/$arch",
+                "http://ftp.myrveln.se/pub/linux/archlinux/$repo/os/$arch",
+                "https://mirror.bahnhof.net/pub/archlinux/$repo/os/$arch",
+                "http://ftp.lysator.liu.se/pub/archlinux/$repo/os/$arch",
+                "http://ftpmirror.infania.net/mirror/archlinux/$repo/os/$arch",
+                "https://mirror.braindrainlan.nu/archlinux/$repo/os/$arch",
+                "https://ftp.lysator.liu.se/pub/archlinux/$repo/os/$arch"
+            ]
+        }
+    },
+    "network_config": {
+        "type": "nm"
+    },
+    "no_pkg_lookups": false,
+    "ntp": true,
+    "offline": false,
+    "packages": [
+        "git",
+        "firefox",
+        "neovim",
+        "neofetch",
+        "timeshift"
+    ],
+    "parallel downloads": 0,
+    "profile_config": {
+        "gfx_driver": "Nvidia (proprietary)",
+        "greeter": "sddm",
+        "profile": {
+            "custom_settings": {
+                "KDE Plasma": {}
+            },
+            "details": [
+                "KDE Plasma"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "save_config": null,
+    "script": "guided",
+    "silent": false,
+    "skip_ntp": false,
+    "skip_version_check": false,
+    "swap": true,
+    "timezone": "Europe/Stockholm",
+    "uki": false,
+    "version": "2.8.6"
+}
