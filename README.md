@@ -28,47 +28,83 @@ otherwise my choice, see [install.log](https://github.com/holmen1/dot-files/blob
 
 ## Post-installation
 
-### yay
-Yet Another Yogurt - An AUR Helper Written in Go
-```
-$ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-```
 
+### DISASTER RECOVERY
+Restore Timehift snapshots with grub-btrfs
 
-### Restore Timehift snapshots with grub-btrfs
-when crashing (when NB)  
 Install Timeshift
 ```
 $ pacman -S timeshift
 ```
-and setup schedule  
+and setup schedule, then enable schedule
+
+```
+$ systemctl enable --now cronie.service
+```
+ 
 
 list snaphots
 ```
 $ sudo btrfs subvolume list /
 ```
 
-ID 260 gen 9 top level 5 path @.snapshots   
 ID 261 gen 17 top level 256 path timeshift-btrfs/snapshots/2024-10-24_01-34-59/@/var/lib/portables  
 ID 262 gen 17 top level 256 path timeshift-btrfs/snapshots/2024-10-24_01-34-59/@/var/lib/machines  
-ID 263 gen 132 top level 5 path timeshift-btrfs/snapshots/2024-10-24_00-41-32/@  
-ID 264 gen 469 top level 5 path @  
-ID 265 gen 226 top level 5  
+ID 263 gen 132 top level 5 path timeshift-btrfs/snapshots/2024-10-24_00-41-32/@   
 
 Install grub-btrfs  
 ```
 $ sudo pacman -S grub-btrfs
 ```
-To manually generate grub snapshot entries you can run
+
+#### Manually generate grub snapshot entries
+run
 ```
 $ sudo /etc/grub.d/41_snapshots-btrfs
 ```
 which updates grub-btrfs.cfg  
 
-You then need to regenerate the GRUB configuration by running one of the following command
+You then need to regenerate the GRUB configuration by running the following command
 
 ```
 $ sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+#### Automatically update grub
+upon snapshot creation or deletion  
+
+By default the daemon is watching the directory /.snapshots. If the daemon should watch a different directory,  
+it can be edited with
+```
+$ sudo systemctl edit --full grub-btrfsd
+```
+
+Set  
+ExecStart=/usr/bin/grub-btrfsd --syslog --timeshift-auto  
+
+That will automatically detect Timeshifts snapshot directory
+
+Also need to monitor changes to the filesystem, and report those changes to applications
+```
+$ sudo pacman -S inotify-tools
+```
+
+Finally activate grub-btrfsd during system startup
+```
+$ sudo systemctl enable grub-btrfsd
+```
+
+
+
+
+
+
+
+
+### yay
+Yet Another Yogurt - An AUR Helper Written in Go
+```
+$ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 ```
 
 
