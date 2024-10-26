@@ -142,3 +142,29 @@ $ sudo ln -s /opt/VSCode-linux-x64/bin/code /usr/local/bin/code
 $ yay -S mullvad-vpn-bin
 
 https://bbs.archlinux.org/viewtopic.php?id=266965
+
+
+[holmen1@arch02 snapshots]$ sudo btrfs subvolume list /
+ID 256 gen 1796 top level 5 path timeshift-btrfs/snapshots/2024-10-24_01-34-59/@
+ID 257 gen 1830 top level 5 path @home
+ID 258 gen 1830 top level 5 path @log
+ID 259 gen 1667 top level 5 path @pkg
+ID 260 gen 1456 top level 5 path @.snapshots
+ID 261 gen 17 top level 256 path timeshift-btrfs/snapshots/2024-10-24_01-34-59/@/var/lib/portables
+ID 262 gen 17 top level 256 path timeshift-btrfs/snapshots/2024-10-24_01-34-59/@/var/lib/machines
+ID 264 gen 1830 top level 5 path @
+ID 278 gen 1830 top level 5 path timeshift-btrfs/snapshots/2024-10-26_13-06-21/@
+ID 279 gen 1830 top level 5 path timeshift-btrfs/snapshots/2024-10-26_14-12-13/@
+
+
+
+[holmen1@arch02 /]$ ls /run/timeshift/1555/backup/
+@  @home  @log  @pkg  @.snapshots  timeshift-btrfs
+
+
+[holmen1@arch02 snapshots]$ sudo btrfs subvolume delete /run/timeshift/1555/backup/timeshift-btrfs/snapshots/2024-10-24_01-34-59/@/var/lib/portables
+Delete subvolume 261 (no-commit): '/run/timeshift/1555/backup/timeshift-btrfs/snapshots/2024-10-24_01-34-59/@/var/lib/portables'
+[holmen1@arch02 snapshots]$ sudo btrfs subvolume delete /run/timeshift/1555/backup/timeshift-btrfs/snapshots/2024-10-24_01-34-59/@/var/lib/machines
+Delete subvolume 262 (no-commit): '/run/timeshift/1555/backup/timeshift-btrfs/snapshots/2024-10-24_01-34-59/@/var/lib/machines'
+[holmen1@arch02 snapshots]$ sudo btrfs subvolume delete /run/timeshift/1555/backup/timeshift-btrfs/snapshots/2024-10-24_01-34-59/@
+Delete subvolume 256 (no-commit): '/run/timeshift/1555/backup/timeshift-btrfs/snapshots/2024-10-24_01-34-59/@'
