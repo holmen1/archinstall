@@ -1,8 +1,6 @@
-# arch
-
-## Pre-installation
+# Pre-installation
 In the latest Arch Linux ISO
-### Connect to the internet
+## Connect to the internet
 Find device name
 ```
 root@archiso ~ # ip addr show
@@ -12,7 +10,7 @@ root@archiso ~ # ip addr show
 ```
 root@archiso ~ # iwctl --passphrase <passphrase> station wlan0 connect NetworkName
 ```
-## Guided installation
+# Guided installation
 Archinstall ships with a pre-programmed Guided Installer guiding you through the mandatory steps as well as some optional configurations that can be done.   
 To start the installer, run
 
@@ -26,10 +24,9 @@ since we will use grub-btrfs later
 otherwise my choice, see [install.log](https://github.com/holmen1/dot-files/blob/master/edited_install.log)  
 
 
-## Post-installation
+# Post-installation
 
-
-### DISASTER RECOVERY
+## DISASTER RECOVERY
 Restore Timehift snapshots with grub-btrfs
 
 Install Timeshift
@@ -57,7 +54,7 @@ Install grub-btrfs
 $ sudo pacman -S grub-btrfs
 ```
 
-#### Manually generate grub snapshot entries
+### Manually generate grub snapshot entries
 run
 ```
 $ sudo /etc/grub.d/41_snapshots-btrfs
@@ -70,7 +67,7 @@ You then need to regenerate the GRUB configuration by running the following comm
 $ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-#### Automatically update grub
+### Automatically update grub
 upon snapshot creation or deletion  
 
 By default the daemon is watching the directory /.snapshots. If the daemon should watch a different directory,  
@@ -93,61 +90,6 @@ Finally activate grub-btrfsd during system startup
 ```
 $ sudo systemctl enable grub-btrfsd
 ```
-
-### Optional packages
-
-#### Visual Studio Code
-Download tar.gz
-
-Move
-```
-$ sudo mv Downloads/VSCode-linux-x64/ /opt/
-```
-
-Link
-```
-$ sudo ln -s /opt/VSCode-linux-x64/bin/code /usr/local/bin/code
-```
-
-
-
-
-
-
-
-
-### yay
-Yet Another Yogurt - An AUR Helper Written in Go
-```
-$ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# arch-config
 
 ## Packages
 List of installed packages
@@ -172,6 +114,28 @@ To install packages from a previously saved list of packages, while not reinstal
 # pacman -S --needed - < pkglist.txt
 ```
 
+### yay
+yay automates usage of the Arch User Repository
+```
+$ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+```
+
+
+
+### Optional packages
+
+#### Visual Studio Code
+Download tar.gz
+
+Move
+```
+$ sudo mv Downloads/VSCode-linux-x64/ /opt/
+```
+
+Link
+```
+$ sudo ln -s /opt/VSCode-linux-x64/bin/code /usr/local/bin/code
+```
 
 
 ## VPN
