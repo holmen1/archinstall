@@ -1,3 +1,4 @@
 mullvad-vpn-bin
+ventoy-bin
 yay
 yay-debug
