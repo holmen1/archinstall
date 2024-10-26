@@ -140,3 +140,5 @@ $ sudo ln -s /opt/VSCode-linux-x64/bin/code /usr/local/bin/code
 
 ## VPN
 $ yay -S mullvad-vpn-bin
+
+https://bbs.archlinux.org/viewtopic.php?id=266965
