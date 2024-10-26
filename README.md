@@ -94,6 +94,21 @@ Finally activate grub-btrfsd during system startup
 $ sudo systemctl enable grub-btrfsd
 ```
 
+### Optional packages
+
+#### Visual Studio Code
+Download tar.gz
+
+Move
+```
+$ sudo mv Downloads/VSCode-linux-x64/ /opt/
+```
+
+Link
+```
+$ sudo ln -s /opt/VSCode-linux-x64/bin/code /usr/local/bin/code
+```
+
 
 
 
