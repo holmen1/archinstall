@@ -6,6 +6,7 @@ htop
 intel-ucode
 isoimagewriter
 kate
+ktorrent
 linux-lts
 nano
 neofetch
