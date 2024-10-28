@@ -1,6 +1,7 @@
 ark
 base
 dolphin
+filelight
 firefox
 htop
 intel-ucode
