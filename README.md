@@ -136,6 +136,13 @@ Link
 ```
 $ sudo ln -s /opt/VSCode-linux-x64/bin/code /usr/local/bin/code
 ```
+## neovim
+
+```
+$ sudo pacman -S nerd-fonts
+```
+select 42) ttf-jetbrains-mono-nerd  
+Add font to terminal profile
 
 
 ## VPN
