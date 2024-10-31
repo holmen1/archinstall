@@ -11,12 +11,12 @@ ktorrent
 linux-lts
 nano
 neofetch
-neovim
 network-manager-applet
 nvidia-dkms
 plasma-meta
 sof-firmware
 timeshift
+ttf-jetbrains-mono-nerd
 wireless_tools
 xorg-xinit
 zram-generator
