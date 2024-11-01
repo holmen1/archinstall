@@ -144,6 +144,34 @@ $ sudo pacman -S nerd-fonts
 select 42) ttf-jetbrains-mono-nerd  
 Add font to terminal profile
 
+## GitHub Copilot in the CLI
+Get gh binary https://github.com/cli/cli/releases/tag/v2.60.1
+
+```
+$ gh auth login
+```
+```
+$ gh extension install github/gh-copilot
+```
+```
+$ gh copilot explain "sudo pacman -Syu"
+```
+Welcome to GitHub Copilot in the CLI!  
+version 1.0.5 (2024-09-12)  
+
+I'm powered by AI, so surprises and mistakes are possible. Make sure to verify any generated code or suggestions, and share feedback so that we can learn and improve. For more information, see https://gh.io/gh-copilot-transparency
+
+Explanation:                                                                      
+                                                                                  
+  • sudo is used to run a command with elevated rights.                           
+    • pacman is the package manager used in Arch Linux and its derivatives.       
+      • -Syu is a combination of flags:                                           
+        • -S synchronizes the package databases, updating them to the latest      
+        version.                                                                  
+        • -y automatically answers "yes" to any prompts, allowing the upgrade to  
+        proceed without user intervention.                                        
+        • -u upgrades all installed packages to their latest versions. 
+
 
 ## VPN
 $ yay -S mullvad-vpn-bin
