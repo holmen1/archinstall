@@ -91,6 +91,19 @@ Finally activate grub-btrfsd during system startup
 $ sudo systemctl enable grub-btrfsd
 ```
 
+## Bluetoth
+
+```
+$ sudo systemctl status bluetooth
+```
+```
+$ sudo systemctl start bluetooth
+```
+```
+$ sudo systemctl enable bluetooth
+```
+
+
 ## Packages
 List of installed packages
 
