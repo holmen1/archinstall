@@ -1,15 +1,16 @@
 #!/bin/bash
 
 # Define an array of source and target directories
-declare -A links=(
-    ["~/repos/dot-files/kitty"]="~/.config/kitty"
-#   ["~/repos/dot-files/nvim"]="~/.config/nvim"
-#   ["~/repos/dot-files/zsh"]="~/.config/zsh"
+links=(
+    "~/repos/dot-files/kitty:~/.config/kitty"
+#   "~/repos/dot-files/nvim:~/.config/nvim"
+#   "~/repos/dot-files/zsh:~/.config/zsh"
 )
 
 # Create the symbolic links
-for source in "${!links[@]}"; do
-    target=${links[$source]}
+for link in "${links[@]}"; do
+    source="${link%%:*}"
+    target="${link##*:}"
     
     # Expand ~ to the home directory
     source_expanded=$(eval echo $source)
