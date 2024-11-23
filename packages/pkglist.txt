@@ -10,6 +10,7 @@ kate
 kitty
 ktorrent
 linux-lts
+man-db
 nano
 neofetch
 network-manager-applet
