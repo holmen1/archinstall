@@ -149,13 +149,12 @@ Link
 ```
 $ sudo ln -s /opt/VSCode-linux-x64/bin/code /usr/local/bin/code
 ```
-## neovim
+## kitty
+[README](https://github.com/holmen1/dot-files/tree/master/kitty)
 
-```
-$ sudo pacman -S nerd-fonts
-```
-select 42) ttf-jetbrains-mono-nerd  
-Add font to terminal profile
+## neovim
+[README](https://github.com/holmen1/dot-files/tree/master/nvim)
+
 
 ## GitHub Copilot in the CLI
 Get gh binary https://github.com/cli/cli/releases/tag/v2.60.1
