@@ -3,7 +3,7 @@
 # Define an array of source and target directories
 links=(
     "~/repos/dot-files/kitty:~/.config/kitty"
-#   "~/repos/dot-files/nvim:~/.config/nvim"
+    "~/repos/dot-files/nvim:~/.config/nvim"
 #   "~/repos/dot-files/zsh:~/.config/zsh"
 )
 
