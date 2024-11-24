@@ -17,3 +17,6 @@ Here are some of the custom keybindings included in the configuration:
 - `Ctrl+Right`: Switch focus to the window on the right
 - `Ctrl+Up`: Switch focus to the window above
 - `Ctrl+Down`: Switch focus to the window below
+- `ctrl+shift+t` (also ⌘+t on macOS) : New tab
+- `ctrl+shift+q` (also ⌘+w on macOS): Close tab
+
