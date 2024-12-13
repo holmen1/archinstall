@@ -1,5 +1,11 @@
 # Pre-installation
 In the latest Arch Linux ISO
+
+## Set the console keyboard
+
+```
+loadkeys sv-latin1
+```
 ## Connect to the internet
 Find device name
 ```
@@ -21,10 +27,44 @@ root@archiso ~ # archinstall
 Note, set  
 "bootloader": "Grub"
 since we will use grub-btrfs later
-otherwise my choice, see [install.log](https://github.com/holmen1/dot-files/blob/master/edited_install.log)  
+otherwise my choice, see [install.log](https://github.com/holmen1/dot-files/blob/master/log/install.log)  
 
 
 # Post-installation
+## REPAIR
+On a Btrfs root file system with subvolumes, you have to make sure that all subvolumes are properly mounted
+as specified in fstab before entering chroot
+
+```
+root@archiso ~ # fdisk -l
+/dev/nvme0n1p1    2048    2099199   2097152     1G EFI System
+/dev/nvme0n1p2 2099200 1000213167 998113968 475.9G Linux root (x86-64)
+```
+
+```
+# mount -o subvol=@ /dev/nvme0np2 /mnt
+# mount -o subvol=@home /dev/nvme0np2 /mnt/home
+```
+
+```
+# lsblk 
+```
+
+```
+# arch-chroot /mnt
+```
+
+chroot to user
+```
+[root@archiso /]# su - holmen1
+```
+
+
+```
+[root@archiso /]# exit
+# cd /
+# umount --recursive /pa
+```
 
 ## DISASTER RECOVERY
 Restore Timehift snapshots with grub-btrfs

@@ -1,0 +1,449 @@
+Mounting /dev/nvme0n1p2: mount /dev/nvme0n1p2 /mnt/arch_btrfs
+Partition /dev/nvme0n1p2 is currently mounted at: ['/mnt/arch_btrfs']
+Unmounting mountpoint: /mnt/arch_btrfs
+Hardware model detected: LENOVO 21K9CTO1WW; UEFI mode: True
+Processor model detected: AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics
+Memory statistics: 26763616 available out of 28368088 total installed
+Could not detect virtual system: ['/usr/bin/systemd-detect-virt'] exited with abnormal exit code [1]: none
+
+System is not running in a VM: ['/usr/bin/systemd-detect-virt'] exited with abnormal exit code [1]: none
+
+Virtualization detected: None; is VM: False
+Graphics devices detected: dict_keys(['Advanced Micro Devices, Inc. [AMD/ATI] Phoenix1 (rev dd)'])
+Disk states before installing:
+{
+    "blockdevices": [
+        {
+            "name": "loop0",
+            "path": "/dev/loop0",
+            "pkname": null,
+            "log_sec": 512,
+            "size": "813 MiB",
+            "pttype": null,
+            "ptuuid": null,
+            "rota": false,
+            "tran": null,
+            "partn": null,
+            "partuuid": null,
+            "parttype": null,
+            "uuid": null,
+            "fstype": "squashfs",
+            "fsver": "4.0",
+            "fsavail": 0,
+            "fsuse_percentage": "100%",
+            "type": "loop",
+            "mountpoint": "/run/archiso/airootfs",
+            "mountpoints": [
+                "/run/archiso/airootfs"
+            ],
+            "fsroots": [
+                "/"
+            ],
+            "children": []
+        },
+        {
+            "name": "sda",
+            "path": "/dev/sda",
+            "pkname": null,
+            "log_sec": 512,
+            "size": "29568 MiB",
+            "pttype": "dos",
+            "ptuuid": "382d5c21",
+            "rota": true,
+            "tran": "usb",
+            "partn": null,
+            "partuuid": null,
+            "parttype": null,
+            "uuid": "2024-12-01-05-48-32-00",
+            "fstype": "iso9660",
+            "fsver": "Joliet Extension",
+            "fsavail": null,
+            "fsuse_percentage": null,
+            "type": "disk",
+            "mountpoint": null,
+            "mountpoints": [],
+            "fsroots": [],
+            "children": [
+                {
+                    "name": "sda1",
+                    "path": "/dev/sda1",
+                    "pkname": "sda",
+                    "log_sec": 512,
+                    "size": "983 MiB",
+                    "pttype": "dos",
+                    "ptuuid": "382d5c21",
+                    "rota": true,
+                    "tran": null,
+                    "partn": 1,
+                    "partuuid": "382d5c21-01",
+                    "parttype": "0x0",
+                    "uuid": "2024-12-01-05-48-32-00",
+                    "fstype": "iso9660",
+                    "fsver": "Joliet Extension",
+                    "fsavail": null,
+                    "fsuse_percentage": null,
+                    "type": "part",
+                    "mountpoint": null,
+                    "mountpoints": [],
+                    "fsroots": [],
+                    "children": []
+                },
+                {
+                    "name": "sda2",
+                    "path": "/dev/sda2",
+                    "pkname": "sda",
+                    "log_sec": 512,
+                    "size": "177 MiB",
+                    "pttype": "dos",
+                    "ptuuid": "382d5c21",
+                    "rota": true,
+                    "tran": null,
+                    "partn": 2,
+                    "partuuid": "382d5c21-02",
+                    "parttype": "0xef",
+                    "uuid": "674B-F8B0",
+                    "fstype": "vfat",
+                    "fsver": "FAT32",
+                    "fsavail": null,
+                    "fsuse_percentage": null,
+                    "type": "part",
+                    "mountpoint": null,
+                    "mountpoints": [],
+                    "fsroots": [],
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "nvme0n1",
+            "path": "/dev/nvme0n1",
+            "pkname": null,
+            "log_sec": 512,
+            "size": "488386 MiB",
+            "pttype": "gpt",
+            "ptuuid": "18f040a2-9937-4212-becd-5b0373b1da62",
+            "rota": false,
+            "tran": "nvme",
+            "partn": null,
+            "partuuid": null,
+            "parttype": null,
+            "uuid": null,
+            "fstype": null,
+            "fsver": null,
+            "fsavail": null,
+            "fsuse_percentage": null,
+            "type": "disk",
+            "mountpoint": null,
+            "mountpoints": [],
+            "fsroots": [],
+            "children": [
+                {
+                    "name": "nvme0n1p1",
+                    "path": "/dev/nvme0n1p1",
+                    "pkname": "nvme0n1",
+                    "log_sec": 512,
+                    "size": "1024 MiB",
+                    "pttype": "gpt",
+                    "ptuuid": "18f040a2-9937-4212-becd-5b0373b1da62",
+                    "rota": false,
+                    "tran": "nvme",
+                    "partn": 1,
+                    "partuuid": "1bb7c11e-e722-4024-9e4b-6ab6933114cd",
+                    "parttype": "c12a7328-f81f-11d2-ba4b-00a0c93ec93b",
+                    "uuid": "7A19-F591",
+                    "fstype": "vfat",
+                    "fsver": "FAT32",
+                    "fsavail": null,
+                    "fsuse_percentage": null,
+                    "type": "part",
+                    "mountpoint": null,
+                    "mountpoints": [],
+                    "fsroots": [],
+                    "children": []
+                },
+                {
+                    "name": "nvme0n1p2",
+                    "path": "/dev/nvme0n1p2",
+                    "pkname": "nvme0n1",
+                    "log_sec": 512,
+                    "size": "487360 MiB",
+                    "pttype": "gpt",
+                    "ptuuid": "18f040a2-9937-4212-becd-5b0373b1da62",
+                    "rota": false,
+                    "tran": "nvme",
+                    "partn": 2,
+                    "partuuid": "7071b2d6-6b2f-4e22-a68a-580fc1737a53",
+                    "parttype": "4f68bce3-e8cd-4db1-96e7-fbcaf984b709",
+                    "uuid": "421fd144-7566-4628-ade1-6dc187f67cef",
+                    "fstype": "btrfs",
+                    "fsver": null,
+                    "fsavail": null,
+                    "fsuse_percentage": null,
+                    "type": "part",
+                    "mountpoint": null,
+                    "mountpoints": [],
+                    "fsroots": [],
+                    "children": []
+                }
+            ]
+        }
+    ]
+}
+Checking version...
+ -- Chosen configuration --
+{
+    "additional-repositories": [],
+    "archinstall-language": "English",
+    "audio_config": null,
+    "bootloader": "Grub",
+    "config_version": "3.0.1",
+    "debug": false,
+    "disk_config": {
+        "config_type": "default_layout",
+        "device_modifications": [
+            {
+                "device": "/dev/nvme0n1",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "boot",
+                            "esp"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "e72898c3-c8c9-42c0-b02d-656e9799d589",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 1
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [
+                            {
+                                "mountpoint": "/",
+                                "name": "@"
+                            },
+                            {
+                                "mountpoint": "/home",
+                                "name": "@home"
+                            },
+                            {
+                                "mountpoint": "/var/log",
+                                "name": "@log"
+                            },
+                            {
+                                "mountpoint": "/var/cache/pacman/pkg",
+                                "name": "@pkg"
+                            },
+                            {
+                                "mountpoint": "/.snapshots",
+                                "name": "@.snapshots"
+                            }
+                        ],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "btrfs",
+                        "mount_options": [
+                            "compress=zstd"
+                        ],
+                        "mountpoint": null,
+                        "obj_id": "08c8095d-561f-42c2-ad43-cb4e47f492ed",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 511034351616
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1074790400
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            }
+        ]
+    },
+    "disk_encryption": null,
+    "hostname": "thinkpad",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "sv-latin1",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US"
+    },
+    "mirror_config": {
+        "custom_mirrors": [],
+        "mirror_regions": {
+            "Sweden": [
+                "{\"url\":\"http://ftp.lysator.liu.se/pub/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Sweden\",\"country_code\":\"SE\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/lysator.liu.se/355/\",\"delay\":3487,\"last_sync\":\"2024-12-12T22:22:48Z\",\"duration_avg\":0.284627379750359,\"duration_stddev\":0.33286746945221973,\"completion_pct\":1.0,\"score\":2}",
+                "{\"url\":\"https://ftp.lysator.liu.se/pub/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Sweden\",\"country_code\":\"SE\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/lysator.liu.se/511/\",\"delay\":3488,\"last_sync\":\"2024-12-12T22:22:48Z\",\"duration_avg\":0.5754904083951691,\"duration_stddev\":0.67830921803389,\"completion_pct\":1.0,\"score\":2}",
+                "{\"url\":\"http://ftp.myrveln.se/pub/linux/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Sweden\",\"country_code\":\"SE\",\"isos\":true,\"ipv4\":true,\"ipv6\":false,\"details\":\"https://archlinux.org/mirrors/myrveln.se/709/\",\"delay\":184,\"last_sync\":\"2024-12-12T23:22:01Z\",\"duration_avg\":0.24980624344037927,\"duration_stddev\":0.21476006850240492,\"completion_pct\":1.0,\"score\":1}",
+                "{\"url\":\"https://ftp.myrveln.se/pub/linux/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Sweden\",\"country_code\":\"SE\",\"isos\":true,\"ipv4\":true,\"ipv6\":false,\"details\":\"https://archlinux.org/mirrors/myrveln.se/766/\",\"delay\":183,\"last_sync\":\"2024-12-12T23:22:01Z\",\"duration_avg\":0.4390446621438731,\"duration_stddev\":0.44837194861903795,\"completion_pct\":1.0,\"score\":1}",
+                "{\"url\":\"http://mirror.accum.se/mirror/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Sweden\",\"country_code\":\"SE\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/accum.se/770/\",\"delay\":1092,\"last_sync\":\"2024-12-12T23:16:26Z\",\"duration_avg\":0.4520619578615448,\"duration_stddev\":0.5267237937604711,\"completion_pct\":1.0,\"score\":1}",
+                "{\"url\":\"https://mirror.accum.se/mirror/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Sweden\",\"country_code\":\"SE\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/accum.se/962/\",\"delay\":1100,\"last_sync\":\"2024-12-12T23:16:26Z\",\"duration_avg\":0.42429099844757623,\"duration_stddev\":0.4098047061186946,\"completion_pct\":1.0,\"score\":1}",
+                "{\"url\":\"https://mirror.osbeck.com/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Sweden\",\"country_code\":\"SE\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/osbeck.com/969/\",\"delay\":57,\"last_sync\":\"2024-12-12T23:24:00Z\",\"duration_avg\":0.08669909640882142,\"duration_stddev\":0.17808745354388247,\"completion_pct\":1.0,\"score\":0}",
+                "{\"url\":\"http://ftpmirror.infania.net/mirror/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Sweden\",\"country_code\":\"SE\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/infania.net/1345/\",\"delay\":6077,\"last_sync\":\"2024-12-12T23:00:27Z\",\"duration_avg\":0.22732845090684436,\"duration_stddev\":0.46691233232382656,\"completion_pct\":0.9940828402366864,\"score\":2}",
+                "{\"url\":\"http://mirror.bahnhof.net/pub/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Sweden\",\"country_code\":\"SE\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/mirror.bahnhof.net/1939/\",\"delay\":2754,\"last_sync\":\"2024-12-12T22:46:19Z\",\"duration_avg\":0.17625333571575097,\"duration_stddev\":0.18749817197875915,\"completion_pct\":1.0,\"score\":1}",
+                "{\"url\":\"https://mirror.bahnhof.net/pub/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Sweden\",\"country_code\":\"SE\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/mirror.bahnhof.net/1938/\",\"delay\":2754,\"last_sync\":\"2024-12-12T22:46:19Z\",\"duration_avg\":0.28397451349969444,\"duration_stddev\":0.2866356166756469,\"completion_pct\":1.0,\"score\":1}",
+                "{\"url\":\"https://mirror.braindrainlan.nu/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Sweden\",\"country_code\":\"SE\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/braindrainlan.nu/2135/\",\"delay\":2552,\"last_sync\":\"2024-12-12T22:54:26Z\",\"duration_avg\":0.42484077163364575,\"duration_stddev\":0.5917181936914194,\"completion_pct\":0.9526627218934911,\"score\":2}"
+            ]
+        }
+    },
+    "network_config": {
+        "type": "iso"
+    },
+    "no_pkg_lookups": false,
+    "ntp": true,
+    "offline": false,
+    "packages": [
+        "git",
+        "vim"
+    ],
+    "parallel downloads": 0,
+    "profile_config": {
+        "gfx_driver": "All open-source",
+        "greeter": "ly",
+        "profile": {
+            "custom_settings": {
+                "Hyprland": {
+                    "seat_access": "polkit"
+                }
+            },
+            "details": [
+                "Hyprland"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "save_config": null,
+    "script": "guided",
+    "silent": false,
+    "skip_ntp": false,
+    "skip_version_check": false,
+    "swap": true,
+    "timezone": "Europe/Stockholm",
+    "uki": false,
+    "version": "3.0.1"
+}
+Unmounting all existing partitions: /dev/nvme0n1
+Unmounting: /dev/nvme0n1p1
+Unmounting: /dev/nvme0n1p2
+Wiping partitions and metadata: /dev/nvme0n1
+Creating partitions: /dev/nvme0n1
+	Type: primary
+	Filesystem: fat32
+	Geometry: 2048 start sector, 2097152 length
+	Type: primary
+	Filesystem: btrfs
+	Geometry: 2099200 start sector, 998113968 length
+Formatting filesystem: mkfs.fat -F 32 /dev/nvme0n1p1
+partition information found: {"name":"nvme0n1p1","path":"/dev/nvme0n1p1","pkname":"nvme0n1","log_sec":512,"size":"1024 MiB","pttype":"gpt","ptuuid":"11bb3295-8158-4eca-95a3-469f4ecc497d","rota":false,"tran":"nvme","partn":1,"partuuid":"a522019c-0946-4656-904a-dc7d30bd57c3","parttype":"c12a7328-f81f-11d2-ba4b-00a0c93ec93b","uuid":"41C9-8D9D","fstype":"vfat","fsver":"FAT32","fsavail":null,"fsuse_percentage":null,"type":"part","mountpoint":null,"mountpoints":[],"fsroots":[],"children":[]}
+Formatting filesystem: mkfs.btrfs -f /dev/nvme0n1p2
+partition information found: {"name":"nvme0n1p2","path":"/dev/nvme0n1p2","pkname":"nvme0n1","log_sec":512,"size":"487360 MiB","pttype":"gpt","ptuuid":"11bb3295-8158-4eca-95a3-469f4ecc497d","rota":false,"tran":"nvme","partn":2,"partuuid":"92e45fa0-4970-449c-8446-345abb409600","parttype":"4f68bce3-e8cd-4db1-96e7-fbcaf984b709","uuid":"f2bda37c-baf5-4b53-bf5f-07a3a4760bbe","fstype":"btrfs","fsver":null,"fsavail":null,"fsuse_percentage":null,"type":"part","mountpoint":null,"mountpoints":[],"fsroots":[],"children":[]}
+Creating subvolumes: /dev/nvme0n1p2
+Mounting /dev/nvme0n1p2: mount -o compress=zstd /dev/nvme0n1p2 /mnt/arch_btrfs
+Creating subvolume: @
+Creating subvolume: @home
+Creating subvolume: @log
+Creating subvolume: @pkg
+Creating subvolume: @.snapshots
+Partition /dev/nvme0n1p2 is currently mounted at: ['/mnt/arch_btrfs']
+Unmounting mountpoint: /mnt/arch_btrfs
+Starting installation...
+Mounting ordered layout
+No lvm config defined to be mounted
+Mounting partition layout
+Mounting /dev/nvme0n1p2: mount -o compress=zstd,subvol=@ /dev/nvme0n1p2 /mnt/archinstall
+Mounting /dev/nvme0n1p2: mount -o compress=zstd,subvol=@,subvol=@home /dev/nvme0n1p2 /mnt/archinstall/home
+Mounting /dev/nvme0n1p2: mount -o compress=zstd,subvol=@,subvol=@home,subvol=@log /dev/nvme0n1p2 /mnt/archinstall/var/log
+Mounting /dev/nvme0n1p2: mount -o compress=zstd,subvol=@,subvol=@home,subvol=@log,subvol=@pkg /dev/nvme0n1p2 /mnt/archinstall/var/cache/pacman/pkg
+Mounting /dev/nvme0n1p2: mount -o compress=zstd,subvol=@,subvol=@home,subvol=@log,subvol=@pkg,subvol=@.snapshots /dev/nvme0n1p2 /mnt/archinstall/.snapshots
+Mounting /dev/nvme0n1p1: mount /dev/nvme0n1p1 /mnt/archinstall/boot
+Waiting for time sync (timedatectl show) to complete.
+Waiting for automatic mirror selection (reflector) to complete.
+Waiting for Arch Linux keyring sync (archlinux-keyring-wkd-sync) to complete.
+Setting mirrors
+Mirrorlist: 
+
+## Sweden
+Server = http://ftp.lysator.liu.se/pub/archlinux/$repo/os/$arch
+...
+
+
+The multilib flag is not set. This system will be installed without multilib repositories enabled.
+The testing flag is not set. This system will be installed without testing repositories enabled.
+Installing packages: ['base', 'base-devel', 'linux-firmware', 'linux', 'btrfs-progs', 'amd-ucode']
+Setting keyboard language to sv-latin1
+Keyboard language for this installation is now set to: sv-latin1
+Setting mirrors
+Mirrorlist: 
+
+...
+## Sweden
+Server = https://mirror.braindrainlan.nu/archlinux/$repo/os/$arch
+
+Setting up swap on zram
+Installing packages: ['zram-generator']
+Enabling service systemd-zram-setup@zram0.service
+Installing packages: ['grub']
+Adding bootloader Grub to /dev/nvme0n1p1
+Installing grub bootloader
+Installing packages: ['grub']
+kernel parameters: zswap.enabled=0 rootfstype=btrfs
+GRUB boot partition: /dev/nvme0n1p1
+GRUB EFI partition: /dev/nvme0n1p1
+Installing packages: ['efibootmgr']
+Installing packages: ['iwd']
+Enabling service iwd
+Enabling service systemd-networkd
+Enabling service systemd-resolved
+Creating user holmen1
+Setting password for holmen1
+Enabling sudo permissions for holmen1
+No audio server will be installed
+Installing packages: ['git', 'vim']
+Installing packages: ['nano', 'vim', 'openssh', 'htop', 'wget', 'iwd', 'wireless_tools', 'wpa_supplicant', 'smartmontools', 'xdg-utils']
+Installing profile Hyprland...
+Installing packages: ['hyprland', 'dunst', 'kitty', 'dolphin', 'wofi', 'xdg-desktop-portal-hyprland', 'qt5-wayland', 'qt6-wayland', 'polkit-kde-agent', 'grim', 'slurp']
+Enabling service polkit
+Installing GFX driver: All open-source
+Installing packages: ['xorg-server', 'xorg-xinit', 'mesa', 'xf86-video-amdgpu', 'xf86-video-ati', 'xf86-video-nouveau', 'xf86-video-vmware', 'libva-mesa-driver', 'libva-intel-driver', 'intel-media-driver', 'vulkan-radeon', 'vulkan-intel']
+Installing packages: ['ly']
+Enabling service ly
+Activating systemd-timesyncd for time synchronization using Arch Linux and ntp.org NTP servers
+Enabling service systemd-timesyncd
+Setting password for root
+Updating /mnt/archinstall/etc/fstab
+For post-installation tips, see https://wiki.archlinux.org/index.php/Installation_guide#Post-installation
+Installation completed without any errors.
+Log files temporarily available at /var/log/archinstall.
+You may reboot when ready.
+

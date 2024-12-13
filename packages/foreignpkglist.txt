@@ -1,6 +1,2 @@
-docker-desktop
-mullvad-vpn-bin
-nerdfetch
-ventoy-bin
 yay
 yay-debug
