@@ -2,8 +2,10 @@ amd-ucode
 base
 dolphin
 dunst
+figlet
 firefox
 grub
+gum
 htop
 hyprland
 iwd
@@ -11,9 +13,11 @@ kitty
 ly
 nano
 polkit-kde-agent
-rofi
+rofi-wayland
+rsync
 smartmontools
 ttf-jetbrains-mono-nerd
+unzip
 vim
 waybar
 wget
