@@ -2,8 +2,10 @@
 
 # Define an array of source and target directories
 links=(
-    "~/repos/dot-files/kitty:~/.config/kitty"
-    "~/repos/dot-files/nvim:~/.config/nvim"
+    "~/repos/archinstall/hypr:~/.config/hypr"
+    "~/repos/archinstall/waybar:~/.config/waybar"
+    "~/repos/archinstall/kitty:~/.config/kitty"
+#   "~/repos/archinstall/nvim:~/.config/nvim"
 #   "~/repos/dot-files/zsh:~/.config/zsh"
 )
 
@@ -15,7 +17,12 @@ for link in "${links[@]}"; do
     # Expand ~ to the home directory
     source_expanded=$(eval echo $source)
     target_expanded=$(eval echo $target)
-    
+   
+    # Remove the target if it is an existing directory or symlink
+    if [ -d "$target_expanded" ] || [ -L "$target_expanded" ]; then
+        rm -rf "$target_expanded"
+    fi
+
     # Create the symbolic link
     ln -sfn "$source_expanded" "$target_expanded"
     
