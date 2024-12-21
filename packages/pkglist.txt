@@ -11,7 +11,9 @@ kitty
 ly
 nano
 polkit-kde-agent
+rofi
 smartmontools
+ttf-jetbrains-mono-nerd
 vim
 waybar
 wget

@@ -151,12 +151,12 @@ Keeping a list of all explicitly installed packages can be useful to backup a sy
 
 ### Export
 ```
-$ pacman -Qqetn > ~/repos/dot-files/packages/pkglist.txt
+$ pacman -Qqetn > ~/repos/archinstall/packages/pkglist.txt
 ```
 option -t, the packages already required by other explicitly installed packages are not mentioned  
 option -n, foreign packages (e.g. from AUR) would be omitted from the list
 ```
-$ pacman -Qqem > foreignpkglist.txt
+$ pacman -Qqem > ~/repos/archinstall/packages/foreignpkglist.txt
 ```
  to create the list of AUR and other foreign packages that have been explicitly installed
 
