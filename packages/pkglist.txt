@@ -11,8 +11,10 @@ kitty
 ly
 nano
 polkit-kde-agent
+rofi-wayland
 smartmontools
 sof-firmware
+ttf-jetbrains-mono-nerd
 vim
 waybar
 wget
