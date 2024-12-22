@@ -3,8 +3,8 @@
 # Define an array of source and target directories
 links=(
     "~/repos/archinstall/hypr:~/.config/hypr"
-    "~/repos/archinstall/waybar:~/.config/waybar"
-    "~/repos/archinstall/kitty:~/.config/kitty"
+#    "~/repos/archinstall/waybar:~/.config/waybar"
+#    "~/repos/archinstall/kitty:~/.config/kitty"
 #   "~/repos/archinstall/nvim:~/.config/nvim"
 #   "~/repos/dot-files/zsh:~/.config/zsh"
 )

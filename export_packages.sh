@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the output directory
-OUTPUT_DIR=~/repos/dot-files/packages
+OUTPUT_DIR=~/repos/archinstall/packages
 
 # Export the list of explicitly installed packages
 pacman -Qqetn > "$OUTPUT_DIR/pkglist.txt"

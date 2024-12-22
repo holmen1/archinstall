@@ -31,6 +31,20 @@ otherwise my choice, see [install.log](https://github.com/holmen1/dot-files/blob
 
 
 # Post-installation
+## Git
+
+```
+$ git config --global user.name "xxx"
+$ git config --global user.email xxx@gmail.com
+```
+```
+ssh-keygen -t ed25519 -C "xxx@gmail.com"  
+eval "$(ssh-agent -s)"  
+ssh-add ~/.ssh/id_ed25519
+```
+After you generate an SSH key pair, you must add the public key to GitHub.com to enable SSH access for your account
+
+
 ## REPAIR
 On a Btrfs root file system with subvolumes, you have to make sure that all subvolumes are properly mounted
 as specified in fstab before entering chroot
