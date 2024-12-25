@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 
 # Function to install packages
 install_packages() {

@@ -31,17 +31,20 @@ otherwise my choice, see [install.log](https://github.com/holmen1/dot-files/blob
 
 
 # Post-installation
-## Git
+
+## Automation script
+```post_install.sh``` gives you the option [Y/n] to
+
+* configure Git and generate SSH keys
+* install yay
+* install packages from pkglist.txt and foreignpkglist.txt
+* link configuration dotfiles to ~/.config
 
 ```
-$ git config --global user.name "xxx"
-$ git config --global user.email xxx@gmail.com
+$ ./post_install.sh
 ```
-```
-ssh-keygen -t ed25519 -C "xxx@gmail.com"  
-eval "$(ssh-agent -s)"  
-ssh-add ~/.ssh/id_ed25519
-```
+
+## Git
 After you generate an SSH key pair, you must add the public key to GitHub.com to enable SSH access for your account
 
 
@@ -159,34 +162,13 @@ $ sudo systemctl enable bluetooth
 
 
 ## Packages
-List of installed packages
 
+### Export installed packages
 Keeping a list of all explicitly installed packages can be useful to backup a system or quicken the installation of a new one
-
-### Export
 ```
-$ pacman -Qqetn > ~/repos/archinstall/packages/pkglist.txt
+$ ./scripts/export_packages.sh
 ```
-option -t, the packages already required by other explicitly installed packages are not mentioned  
-option -n, foreign packages (e.g. from AUR) would be omitted from the list
-```
-$ pacman -Qqem > ~/repos/archinstall/packages/foreignpkglist.txt
-```
- to create the list of AUR and other foreign packages that have been explicitly installed
-
-### Install
-
-To install packages from a previously saved list of packages, while not reinstalling previously installed packages that are already up-to-date, run:
-```
-# pacman -S --needed - < pkglist.txt
-```
-
-### yay
-yay automates usage of the Arch User Repository
-```
-$ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-```
-
+creates files pkglist.txt and foreignpkglist.txt in the packages directory
 
 
 ### Optional packages

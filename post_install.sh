@@ -37,6 +37,7 @@ if prompt_user "Do you want to configure Git?"; then
 fi
 
 # Prompt to install yay
+# yay automates usage of the Arch User Repository
 if prompt_user "Do you want to install yay?"; then
   install_yay
 fi
@@ -47,7 +48,7 @@ if prompt_user "Do you want to install packages from pkglist.txt?"; then
     echo "pkglist.txt not found!"
     exit 1
   fi
-  "$SCRIPT_DIR/install.sh" "$PKGLIST"
+  "$SCRIPT_DIR/install_packages.sh" "$PKGLIST"
 fi
 
 # Prompt to install packages from foreignpkglist.txt
@@ -56,7 +57,7 @@ if prompt_user "Do you want to install packages from foreignpkglist.txt?"; then
     echo "foreignpkglist.txt not found!"
     exit 1
   fi
-  "$SCRIPT_DIR/install.sh" "$FOREIGN_PKGLIST"
+  "$SCRIPT_DIR/install_packages.sh" "$FOREIGN_PKGLIST"
 fi
 
 # Prompt to link the configuration files
