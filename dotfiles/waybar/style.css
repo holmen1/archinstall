@@ -12,6 +12,7 @@
 
 @define-color backgroundlight rgba(204, 255, 204, 0.6); /* Mint 60% transparency */
 @define-color backgrounddark #FFFFFF;
+@define-color backgroundwhite #FFFFFF;
 @define-color workspacesbackground1 #FFFFFF;
 @define-color workspacesbackground2 #CCCCCC;
 @define-color bordercolor #FFFFFF;
@@ -26,7 +27,7 @@
  * ----------------------------------------------------- */
 
 * {
-    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Noto Sans CJK JP", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     border: none;
     border-radius: 0px;
 }
@@ -44,19 +45,19 @@ window#waybar {
  * ----------------------------------------------------- */
 
 #workspaces {
-    margin: 5px 1px 6px 1px;
-    padding: 0px 1px;
+    margin: 0px 0px;
+    padding: 0px 0px;
     border-radius: 13px;
     border: 0px;
     font-weight: bold;
     font-style: normal;
-    font-size: 12px;
+    font-size: 14px;
     color: @textcolor1;
 }
 
 #workspaces button {
     padding: 0px 5px;
-    margin: 4px 3px;
+    margin: 0px 0px;
     border-radius: 13px;
     border: 0px;
     color: @textcolor4;
@@ -67,7 +68,7 @@ window#waybar {
     color: @textcolor1;
     background: @backgroundlight;
     border-radius: 13px;
-    min-width: 40px;
+    min-width: 30px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -83,9 +84,9 @@ window#waybar {
 
 tooltip {
     border-radius: 10px;
-    background-color: @backgroundlight;
+    background-color: @backgroundwhite;
     opacity:0.8;
-    padding:20px;
+    padding: 10px;
     margin:0px;
 }
 
@@ -99,8 +100,8 @@ tooltip label {
 
 #window {
     background: @backgroundlight;
-    margin: 10px 15px 10px 0px;
-    padding: 2px 10px 0px 10px;
+    padding: 0px 5px;
+    margin: 0px 5px;
     border-radius: 13px;
     color:@textcolor2;
     font-size:14px;
@@ -112,26 +113,6 @@ window#waybar.empty #window {
 }
 
 /* -----------------------------------------------------
- * Taskbar
- * ----------------------------------------------------- */
-
-#taskbar {
-    background: @backgroundlight;
-    margin: 6px 15px 6px 0px;
-    padding:0px;
-    border-radius: 15px;
-    font-weight: normal;
-    font-style: normal;
-    border: 3px solid @backgroundlight;
-}
-
-#taskbar button {
-    margin:0;
-    border-radius: 15px;
-    padding: 0px 5px 0px 5px;
-}
-
-/* -----------------------------------------------------
  * Modules
  * ----------------------------------------------------- */
 
@@ -140,7 +121,7 @@ window#waybar.empty #window {
 }
 
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+    margin-right: 5px;
 }
 
 /* -----------------------------------------------------
@@ -151,19 +132,12 @@ window#waybar.empty #window {
 #custom-filemanager,
 #network,
 #pulseaudio,
-#battery,
 #custom-quicklink1,
 #custom-quicklink2,
 #custom-quicklink3,
-#custom-quicklink4,
-#custom-quicklink5,
-#custom-quicklink6,
-#custom-quicklink7,
-#custom-quicklink8,
-#custom-quicklink9,
-#custom-quicklink10 {
-    padding:0px;
-    margin-right: 7px;
+#custom-quicklink4 {
+    padding: 0px 0px;
+    margin: 0px 0px;
     font-size:16px;
     color: @textcolor4;
 }
@@ -174,10 +148,11 @@ window#waybar.empty #window {
 
 #custom-appmenu {
     background-color: @backgroundlight;
+    padding: 0px 2px;
+    margin: 0px 5px;
     color: @textcolor1;
-    font-size:14px;
+    font-size:16px;
     border-radius: 15px;
-    margin: 10px 10px 10px 10px;
 }
 
 /* -----------------------------------------------------
@@ -185,9 +160,9 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-exit {
-    margin: 2px 20px 0px 0px;
-    padding:0px;
-    font-size:14px;
+    padding: 0px;
+    margin: 0px 10px 0px 0px;
+    font-size:18px;
     color: @textcolor4;
 }
 
@@ -196,9 +171,9 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
  #disk,#memory,#cpu,#language {
-    margin:0px;
-    padding:0px;
-    font-size:12px;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    font-size:14px;
     color:@textcolor4;
 }
 
@@ -212,10 +187,11 @@ window#waybar.empty #window {
 
 #clock {
     background-color: @backgroundlight;
-    font-size: 12px;
+    padding: 0px 5px;
+    margin: 0px 5px;
+    font-size: 14px;
     color: @textcolor1;
     border-radius: 13px;
-    margin: 10px 7px 10px 0px;
 }
 
 /* -----------------------------------------------------
@@ -224,10 +200,11 @@ window#waybar.empty #window {
 
 #pulseaudio {
     background-color: @backgroundlight;
-    font-size: 12px;
+    font-size: 14px;
     color: @textcolor2;
     border-radius: 13px;
-    margin: 10px 10px 10px 0px;
+    padding: 0px 5px;
+    margin: 0px 10px;
 }
 
 #pulseaudio.muted {
@@ -241,10 +218,11 @@ window#waybar.empty #window {
 
 #network {
     background-color: @backgroundlight;
-    font-size: 12px;
+    padding: 0px 5px;
+    margin: 0px 0px;
+    font-size: 14px;
     color: @textcolor2;
     border-radius: 13px;
-    margin: 10px 10px 10px 0px;
 }
 
 #network.ethernet {
@@ -258,33 +236,16 @@ window#waybar.empty #window {
 }
 
 /* -----------------------------------------------------
- * Bluetooth
- * ----------------------------------------------------- */
-
- #bluetooth, #bluetooth.on, #bluetooth.connected {
-    background-color: @backgroundlight;
-    font-size: 12px;
-    color: @textcolor2;
-    border-radius: 13px;
-    margin: 10px 13px 10px 0px;
-}
-
-#bluetooth.off {
-    background-color: transparent;
-    padding: 0px;
-    margin: 0px;
-}
-
-/* -----------------------------------------------------
  * Battery
  * ----------------------------------------------------- */
 
 #battery {
     background-color: @backgroundlight;
-    font-size: 12px;
+    font-size: 14px;
     color: @textcolor2;
     border-radius: 13px;
-    margin: 10px 13px 10px 0px;
+    padding: 0px 5px;
+    margin: 0px 0px;
 }
 
 #battery.charging, #battery.plugged {
@@ -314,7 +275,8 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #tray {
-    margin:0px 10px 0px 0px;
+    padding: 0px 5px;
+    margin: 0px 10px;
 }
 
 #tray > .passive {
