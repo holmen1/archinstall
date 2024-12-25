@@ -11,7 +11,6 @@
 */
 
 @define-color backgroundlight rgba(204, 255, 204, 0.6); /* Mint 60% transparency */
-@define-color backgrounddark #FFFFFF;
 @define-color backgroundwhite #FFFFFF;
 @define-color workspacesbackground1 #FFFFFF;
 @define-color workspacesbackground2 #CCCCCC;
@@ -101,7 +100,7 @@ tooltip label {
 #window {
     background: @backgroundlight;
     padding: 0px 5px;
-    margin: 0px 5px;
+    margin: 0px 0px;
     border-radius: 13px;
     color:@textcolor2;
     font-size:14px;
@@ -148,7 +147,7 @@ window#waybar.empty #window {
 
 #custom-appmenu {
     background-color: @backgroundlight;
-    padding: 0px 2px;
+    padding: 0px 5px;
     margin: 0px 5px;
     color: @textcolor1;
     font-size:16px;
@@ -208,7 +207,7 @@ window#waybar.empty #window {
 }
 
 #pulseaudio.muted {
-    background-color: @backgrounddark;
+    background-color: @backgroundlight;
     color: @textcolor1;
 }
 

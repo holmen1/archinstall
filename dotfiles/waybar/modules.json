@@ -39,7 +39,7 @@
 
     // Wofi Application Launcher
     "custom/appmenu": {
-        "format": " 松 ",
+        "format": "松",
         "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings",
         "on-click": "wofi --show drun",
         "on-click-right": "~/.config/waybar/keybindings.sh",
@@ -171,7 +171,6 @@
             "headset": "",
             "phone": "",
             "portable": "",
-            "car": "",
             "default": ["", " ", " "]
         },
         "on-click": "pavucontrol"
