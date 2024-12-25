@@ -12,8 +12,6 @@ BASE_DIR="$1"
 links=(
     "$BASE_DIR/dotfiles/hypr:~/.config/hypr"
     "$BASE_DIR/dotfiles/waybar:~/.config/waybar"
-    "$BASE_DIR/dotfiles/dunst:~/.config/dunst"
-    "$BASE_DIR/dotfiles/rofi:~/.config/rofi"
     "$BASE_DIR/dotfiles/wlogout:~/.config/wlogout"
 #    "$BASE_DIR/kitty:~/.config/kitty"
 #    "$BASE_DIR/nvim:~/.config/nvim"
