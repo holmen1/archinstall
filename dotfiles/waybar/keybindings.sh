@@ -22,15 +22,12 @@ do
         line="$(echo "$line" | sed 's/bind = //g')"
         line="$(echo "$line" | sed 's/bindm = //g')"
 
-        IFS='#' 
-        read -a strarr <<<"$line" 
-        kb_str=${strarr[0]}
-        cm_str=${strarr[1]}
+        IFS=',' read -r kb_str cm_str <<< "$line"
 
-        IFS=',' 
-        read -a kbarr <<<"$kb_str" 
+        IFS=',' read -r -a kbarr <<< "$kb_str"
 
-        item="${kbarr[0]}  + ${kbarr[1]}"$'\r'"${cm_str:1}"
+        item="${kbarr[0]} + ${kbarr[1]}: ${cm_str}"
+
         keybinds=$keybinds$item$'\n'
     fi 
 done < "$config_file"
