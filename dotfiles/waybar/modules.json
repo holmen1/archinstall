@@ -90,7 +90,7 @@
     // CPU
     "cpu": {
         "format": "/ C {usage}% ",
-        "on-click": "alacritty -e htop"
+        "on-click": "kitty -e htop"
     },
 
     // Memory
@@ -186,13 +186,6 @@
         "interval": 30,
         "on-click": "blueman-manager",
         "format-no-controller": ""
-    },
-
-    // Other
-    "user": {
-        "format": "{user}",
-        "interval": 60,
-        "icon": false,
     },
 
     // Idle Inhibator

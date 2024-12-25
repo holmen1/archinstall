@@ -10,7 +10,7 @@
  * ----------------------------------------------------- 
 */
 
-@define-color backgroundlight #FFFFFF;
+@define-color backgroundlight rgba(204, 255, 204, 0.6); /* Mint 60% transparency */
 @define-color backgrounddark #FFFFFF;
 @define-color workspacesbackground1 #FFFFFF;
 @define-color workspacesbackground2 #CCCCCC;
@@ -18,6 +18,7 @@
 @define-color textcolor1 #000000;
 @define-color textcolor2 #000000;
 @define-color textcolor3 #FFFFFF;
+@define-color textcolor4 rgba(204, 255, 204, 0.6); /* Mint 60% transparency */
 @define-color iconcolor #FFFFFF;
 
 /* -----------------------------------------------------
@@ -58,13 +59,13 @@ window#waybar {
     margin: 4px 3px;
     border-radius: 13px;
     border: 0px;
-    color: @textcolor3;
+    color: @textcolor4;
     transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
     color: @textcolor1;
-    background: @workspacesbackground2;
+    background: @backgroundlight;
     border-radius: 13px;
     min-width: 40px;
     transition: all 0.3s ease-in-out;
@@ -151,8 +152,6 @@ window#waybar.empty #window {
 #network,
 #pulseaudio,
 #battery,
-#custom-appmenu,
-
 #custom-quicklink1,
 #custom-quicklink2,
 #custom-quicklink3,
@@ -166,7 +165,7 @@ window#waybar.empty #window {
     padding:0px;
     margin-right: 7px;
     font-size:16px;
-    color: @iconcolor;
+    color: @textcolor4;
 }
 
 /* -----------------------------------------------------
@@ -174,7 +173,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-appmenu {
-    background-color: @backgrounddark;
+    background-color: @backgroundlight;
     color: @textcolor1;
     font-size:14px;
     border-radius: 15px;
@@ -189,7 +188,7 @@ window#waybar.empty #window {
     margin: 2px 20px 0px 0px;
     padding:0px;
     font-size:14px;
-    color: @iconcolor;
+    color: @textcolor4;
 }
 
 /* -----------------------------------------------------
@@ -200,7 +199,7 @@ window#waybar.empty #window {
     margin:0px;
     padding:0px;
     font-size:12px;
-    color:@iconcolor;
+    color:@textcolor4;
 }
 
 #language {
@@ -212,7 +211,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #clock {
-    background-color: @backgrounddark;
+    background-color: @backgroundlight;
     font-size: 12px;
     color: @textcolor1;
     border-radius: 13px;
