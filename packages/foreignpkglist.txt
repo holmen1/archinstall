@@ -1,4 +1,3 @@
-hyprland-qtutils
 wlogout
 yay
 yay-debug
