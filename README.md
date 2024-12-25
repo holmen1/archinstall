@@ -180,6 +180,9 @@ creates files pkglist.txt and foreignpkglist.txt in the packages directory
 #### Visual Studio Code
 Download tar.gz
 
+```
+$ tar -xvzf code-stable-x64-1734606550.tar.gz 
+```
 Move
 ```
 $ sudo mv Downloads/VSCode-linux-x64/ /opt/
