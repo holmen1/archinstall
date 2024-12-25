@@ -12,6 +12,10 @@ Find device name
 root@archiso ~ # ip addr show
 ```
 2: wlan0: ...
+```
+iwctl station wlan0 scan
+iwctl station wlan0 get-networks
+```
 
 ```
 root@archiso ~ # iwctl --passphrase <passphrase> station wlan0 connect NetworkName
