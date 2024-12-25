@@ -37,11 +37,12 @@
         "separate-outputs": true
     },
 
-    // Rofi Application Launcher
+    // Wofi Application Launcher
     "custom/appmenu": {
         "format": "Apps",
         "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings",
         "on-click": "wofi --show drun",
+        "on-click-right": "~/.config/waybar/keybindings.sh",
         "return-type": "json",
         "interval": 600
     },
