@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 window#waybar {
@@ -53,55 +53,30 @@ button:hover {
     background-color: #a37800;
 }
 
-#workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
-}
-
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-
 #mode {
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
+
 #wireplumber,
 #tray,
 #mode,
-#idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon {
     padding: 0 10px;
     color: #ffffff;
+    background-color: #ffa000;
 }
 
-#window {
-    background: #97e1ad;
+#custom-appmenu {
+    background-color: transparent;
+    color: #97e1ad;
     padding: 0px 5px;
-    margin: 0px 0px;
-    border-radius: 13px;
-    color: #000000;
+    margin: 0px 5px;
+    font-size:16px;
+    font-weight: bold;
+    border-radius: 15px;
 }
 
 #workspaces {
@@ -109,6 +84,7 @@ button:hover {
     padding: 0px 0px;
     border-radius: 13px;
     border: 0px;
+    font-size: 16px;
     font-weight: bold;
     color: #000000;
 }
@@ -118,18 +94,9 @@ button:hover {
     margin: 0px 0px;
     border-radius: 13px;
     border: 0px;
+    background-color: transparent;
     color: #97e1ad;
     transition: all 0.3s ease-in-out;
-}
-
-
-#custom-appmenu {
-    background-color: #97e1ad;
-    padding: 0px 5px;
-    margin: 0px 5px;
-    color: #000000;
-    font-size:16px;
-    border-radius: 15px;
 }
 
 #workspaces button.active {
@@ -144,25 +111,6 @@ button:hover {
     color: #000000;
     background: #CCCCCC;
     border-radius: 13px;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-
-#clock {
-    background-color: #64727D;
-}
-
-#battery {
-    background-color: #ffffff;
-    color: #000000;
 }
 
 #battery.charging, #battery.plugged {
@@ -211,38 +159,41 @@ label:focus {
     background-color: #000000;
 }
 
-#cpu {
-    background-color: #2ecc71;
+#temperature,
+#window,
+#pulseaudio,
+#battery,
+#cpu,
+#memory,
+#disk,
+#backlight,
+#network {
+    background: #97e1ad;
+    padding: 0px 8px;
+    margin: 0px 0px;
+    border-radius: 13px;
     color: #000000;
 }
 
-#memory {
-    background-color: #9b59b6;
+#clock {
+    background: #97e1ad;
+    padding: 0px 8px;
+    margin: 0px 0px;
+    border-radius: 13px;
+    font-weight: bold;
+    color: #000000;
 }
 
-#disk {
-    background-color: #964B00;
-}
-
-#backlight {
-    background-color: #90b1b1;
-}
-
-#network {
-    background-color: #2980b9;
+#temperature.critical {
+    background-color: #eb4d4b;
 }
 
 #network.disconnected {
     background-color: #f53c3c;
 }
 
-#pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
-}
-
 #pulseaudio.muted {
-    background-color: #90b1b1;
+    background-color: #f1c40f;
     color: #2a5c45;
 }
 
@@ -263,14 +214,6 @@ label:focus {
     background-color: #ffa000;
 }
 
-#temperature {
-    background-color: #f0932b;
-}
-
-#temperature.critical {
-    background-color: #eb4d4b;
-}
-
 #tray {
     background-color: #2980b9;
 }
@@ -284,29 +227,13 @@ label:focus {
     background-color: #eb4d4b;
 }
 
-#idle_inhibitor {
-    background-color: #2d3436;
-}
-
-#idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
-}
-
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
+/* Custom Exit module styles */
+#custom-exit {
+    padding: 0px;
+    margin: 0px 5px;
+    font-size:18px;
+    background-color: transparent;
+    color: #97e1ad;
 }
 
 #keyboard-state > label {
@@ -345,3 +272,4 @@ label:focus {
 #privacy-item.audio-out {
     background-color: #0069d4;
 }
+
