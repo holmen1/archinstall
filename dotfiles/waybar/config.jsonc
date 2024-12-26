@@ -7,7 +7,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "sway/workspaces",
+        "hyprland/workspaces",
         "sway/mode",
         "sway/scratchpad",
         "custom/media"
@@ -32,23 +32,6 @@
         "tray",
         "custom/exit"
     ],
-    // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
 
     // Hyprland Window
     "hyprland/window": {
@@ -61,6 +44,22 @@
         },
         "separate-outputs": true
     },
+    // Workspaces
+    "hyprland/workspaces" : {
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{}",
+        "format-icons": {
+			"urgent": "",
+			"active": "",
+			"default": ""
+        },
+        "persistent-workspaces": {
+             "*": 4
+        }  
+    },
+
 
     "keyboard-state": {
         "numlock": true,

@@ -98,9 +98,44 @@ button:hover {
     color: #ffffff;
 }
 
-#window,
+#window {
+    background: #97e1ad;
+    padding: 0px 5px;
+    margin: 0px 0px;
+    border-radius: 13px;
+    color: #000000;
+}
+
 #workspaces {
-    margin: 0 4px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border-radius: 13px;
+    border: 0px;
+    font-weight: bold;
+    color: #000000;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    margin: 0px 0px;
+    border-radius: 13px;
+    border: 0px;
+    color: #97e1ad;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    color: #000000;
+    background: #97e1ad;
+    border-radius: 13px;
+    min-width: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+    color: #000000;
+    background: #CCCCCC;
+    border-radius: 13px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -254,23 +289,6 @@ label:focus {
 #idle_inhibitor.activated {
     background-color: #ecf0f1;
     color: #2d3436;
-}
-
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
 }
 
 #language {
