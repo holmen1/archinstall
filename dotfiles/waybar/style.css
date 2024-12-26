@@ -4,10 +4,16 @@
     font-size: 12px;
 }
 
+/* If appmenu is the leftmost module, increase left margin */
+.modules-left > widget:first-child > #custom-appmenu {
+    margin-left: 5px;
+}
+.modules-right > widget:last-child > #custom-exit {
+    margin-right: 5px;
+}
+
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    background-color: transparent;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -15,15 +21,6 @@ window#waybar {
 window#waybar.hidden {
     opacity: 0.2;
 }
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
 
 window#waybar.termite {
     background-color: #3F3F3F;
@@ -53,15 +50,8 @@ button:hover {
     background-color: #a37800;
 }
 
-#mode {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-
 #wireplumber,
 #tray,
-#mode,
 #scratchpad,
 #power-profiles-daemon {
     padding: 0 10px;
@@ -69,31 +59,25 @@ button:hover {
     background-color: #ffa000;
 }
 
-#custom-appmenu {
-    background-color: transparent;
-    color: #97e1ad;
-    padding: 0px 5px;
-    margin: 0px 5px;
+#custom-appmenu,
+#custom-browser,
+#custom-filemanager {
+    padding: 0px 0px;
     font-size:16px;
-    font-weight: bold;
-    border-radius: 15px;
+    color: #97e1ad;
+    background-color: transparent;
 }
 
 #workspaces {
-    margin: 0px 0px;
     padding: 0px 0px;
     border-radius: 13px;
-    border: 0px;
     font-size: 16px;
     font-weight: bold;
-    color: #000000;
 }
 
 #workspaces button {
     padding: 0px 5px;
-    margin: 0px 0px;
     border-radius: 13px;
-    border: 0px;
     background-color: transparent;
     color: #97e1ad;
     transition: all 0.3s ease-in-out;
@@ -170,7 +154,6 @@ label:focus {
 #network {
     background: #97e1ad;
     padding: 0px 10px;
-    margin: 0px 0px;
     border-radius: 13px;
     color: #000000;
 }
@@ -178,7 +161,6 @@ label:focus {
 #clock {
     background: #97e1ad;
     padding: 0px 8px;
-    margin: 0px 0px;
     border-radius: 13px;
     font-weight: bold;
     color: #000000;
@@ -230,7 +212,6 @@ label:focus {
 /* Custom Exit module styles */
 #custom-exit {
     padding: 0px;
-    margin: 0px 5px;
     font-size:18px;
     background-color: transparent;
     color: #97e1ad;

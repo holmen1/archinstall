@@ -8,8 +8,7 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/appmenu",
-        "sway/mode",
-        "sway/scratchpad",
+        "group/quicklinks",
         "hyprland/window"
     ],
     "modules-center": [
@@ -64,16 +63,6 @@
              "*": 4
         }  
     },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
     "tray": {
         // "icon-size": 21,
         "spacing": 10
@@ -85,10 +74,12 @@
     },
     "cpu": {
         "format": "{usage}% ",
+        "on-click": "kitty -e htop",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+        "on-click": "kitty -e htop"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -162,5 +153,24 @@
         "tooltip-format": "Powermenu",
         "on-click": "wlogout -b 4",
         "tooltip": false
+    },
+
+    // Quicklinks
+    "custom/browser": {
+        "format": " ",
+        "on-click": "firefox",
+        "tooltip-format": "Open the browser"
+    },
+    "custom/filemanager": {
+        "format": " ",
+        "on-click": "dolphin",
+        "tooltip-format": "Open the filemanager"
+    },
+    "group/quicklinks": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/browser",
+            "custom/filemanager"
+        ]
     }
 }
