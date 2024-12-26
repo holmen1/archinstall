@@ -20,7 +20,7 @@
         "power-profiles-daemon",
         "cpu",
         "memory",
-        "temperature",
+        "custom/temperature",
         "backlight",
         "battery",
         "clock",
@@ -81,14 +81,6 @@
         "format": "{}% ",
         "on-click": "kitty -e htop"
     },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        "format-critical": "{temperatureC}°C",
-        "format": "{temperatureC}°C",
-        "format-icons": ["", "", ""]
-    },
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
@@ -145,6 +137,12 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+
+    "custom/temperature": {
+        "format": "{}",
+        "exec": "~/.config/waybar/check_temperature.sh",
+        "interval": 10
     },
 
     // Power Menu

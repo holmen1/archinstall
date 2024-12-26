@@ -109,10 +109,14 @@ button:hover {
     }
 }
 
+/* Only shown when temperature critical */
+#custom-temperature ,
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
     background-color: #f53c3c;
     color: #ffffff;
+    padding: 0px 10px;
+    border-radius: 13px;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -143,7 +147,6 @@ label:focus {
     background-color: #000000;
 }
 
-#temperature,
 #window,
 #pulseaudio,
 #battery,
@@ -164,10 +167,6 @@ label:focus {
     border-radius: 13px;
     font-weight: bold;
     color: #000000;
-}
-
-#temperature.critical {
-    background-color: #eb4d4b;
 }
 
 #network.disconnected {
