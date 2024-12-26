@@ -13,6 +13,7 @@ ly
 nano
 noto-fonts-cjk
 polkit-kde-agent
+power-profiles-daemon
 smartmontools
 sof-firmware
 ttf-jetbrains-mono-nerd
