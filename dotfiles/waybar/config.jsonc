@@ -7,6 +7,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "custom/appmenu",
         "sway/mode",
         "sway/scratchpad",
         "hyprland/window"
@@ -41,6 +42,15 @@
             "(.*) Microsoft Teams": "$1"
         },
         "separate-outputs": true
+    },
+    // Wofi Application Launcher
+    "custom/appmenu": {
+        "format": "松",
+        "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings",
+        "on-click": "wofi --show drun",
+        "on-click-right": "~/.config/waybar/keybindings.sh",
+        "return-type": "json",
+        "interval": 600
     },
     // Workspaces
     "hyprland/workspaces" : {

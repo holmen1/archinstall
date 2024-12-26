@@ -122,6 +122,16 @@ button:hover {
     transition: all 0.3s ease-in-out;
 }
 
+
+#custom-appmenu {
+    background-color: #97e1ad;
+    padding: 0px 5px;
+    margin: 0px 5px;
+    color: #000000;
+    font-size:16px;
+    border-radius: 15px;
+}
+
 #workspaces button.active {
     color: #000000;
     background: #97e1ad;
