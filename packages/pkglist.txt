@@ -1,5 +1,7 @@
 amd-ucode
 base
+blueman
+bluez-utils
 brightnessctl
 dolphin
 dunst

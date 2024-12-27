@@ -153,7 +153,9 @@ $ sudo systemctl enable grub-btrfsd
 ```
 
 ## Bluetoth
-
+```
+$ yay -S blueman bluez-utils
+```
 ```
 $ sudo systemctl status bluetooth
 ```
