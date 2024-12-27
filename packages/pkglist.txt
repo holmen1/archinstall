@@ -13,6 +13,7 @@ iwd
 kitty
 ly
 nano
+neovim
 noto-fonts-cjk
 polkit-kde-agent
 power-profiles-daemon
