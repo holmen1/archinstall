@@ -13,6 +13,7 @@ links=(
     "$BASE_DIR/dotfiles/hypr:~/.config/hypr"
     "$BASE_DIR/dotfiles/waybar:~/.config/waybar"
     "$BASE_DIR/dotfiles/wlogout:~/.config/wlogout"
+    "$BASE_DIR/dotfiles/rofi:~/.config/rofi"
 #    "$BASE_DIR/kitty:~/.config/kitty"
 #    "$BASE_DIR/nvim:~/.config/nvim"
 #    "$BASE_DIR/zsh:~/.config/zsh"

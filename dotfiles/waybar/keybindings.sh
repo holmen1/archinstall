@@ -26,4 +26,4 @@ do
 done < "$config_file"
 
 sleep 0.2
-wofi --dmenu --prompt "Keybinds" <<< "$keybinds"
+rofi -dmenu -i -markup -eh 2 -replace -p "Keybinds" <<< "$keybinds"
