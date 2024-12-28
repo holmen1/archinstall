@@ -1,5 +1,6 @@
 amd-ucode
 base
+bash-language-server
 blueman
 bluez-utils
 brightnessctl
@@ -12,7 +13,6 @@ hyprland
 iwd
 kitty
 ly
-nano
 neovim
 noto-fonts-cjk
 polkit-kde-agent
@@ -21,6 +21,7 @@ rofi-wayland
 smartmontools
 sof-firmware
 ttf-jetbrains-mono-nerd
+unzip
 vim
 waybar
 wget
