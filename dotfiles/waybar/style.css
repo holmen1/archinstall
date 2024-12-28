@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 /* If appmenu is the leftmost module, increase left margin */
@@ -42,7 +42,7 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+    box-shadow: inset 0 -1px #ffffff;
 }
 
 /* you can set a style on hover for any module like this 
@@ -134,7 +134,7 @@ button:hover {
     padding: 0px 2px;
 }
 #power-profiles-daemon.balanced {
-    padding-right: 7px;
+    padding-right: 6px;
 }
 #power-profiles-daemon.power-saver {
     padding-right: 5px;
