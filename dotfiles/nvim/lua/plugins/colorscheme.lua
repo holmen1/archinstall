@@ -16,5 +16,16 @@ return {
       vim.cmd.hi 'Comment gui=none'
     end,
   },
+  -- Catppuccin theme configuration
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    config = function()
+      -- You can configure catppuccin here if needed
+      require('catppuccin').setup({
+        -- Your catppuccin configuration here
+      })
+    end,
+  },
 }
 -- vim: ts=2 sts=2 sw=2 et

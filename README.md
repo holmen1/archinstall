@@ -195,10 +195,10 @@ Link
 $ sudo ln -s /opt/VSCode-linux-x64/bin/code /usr/local/bin/code
 ```
 ## kitty
-[README](https://github.com/holmen1/dot-files/tree/master/kitty)
+[README](https://github.com/holmen1/archinstall/blob/desktop/dotfiles/kitty/README.md)
 
 ## neovim
-[README](https://github.com/holmen1/dot-files/tree/master/nvim)
+[README](https://github.com/holmen1/archinstall/blob/desktop/dotfiles/nvim/README.md)
 
 
 ## GitHub Copilot in the CLI
@@ -281,3 +281,12 @@ Then delete
 ```
 $ sudo timeshift --delete --snapshot '2024-10-24_01-34-59'
 ```
+
+## lspconfig
+```
+yay -S unzip
+```
+luastyles: failed to install
+
+## VirtualBox
+check box: Enable EFI
