@@ -287,3 +287,6 @@ $ sudo timeshift --delete --snapshot '2024-10-24_01-34-59'
 yay -S unzip
 ```
 luastyles: failed to install
+
+## VirtualBox
+check box: Enable EFI

@@ -3,15 +3,27 @@
 ## Custom keymap
 
 ### neo-tree
-C + n - Neotree filesystem  
-leader gs - Neotree git_status  
-leader bf - Neotree buffers   
+\ - toggle neotree
+a - create a new file OR directory. Add a `/` to the end of the name to make a directory  
+d - delete a file or directory  
+i - show file details in popup window  
+r - rename a file or directory
+b - rename the selected file or directory without the extension  
+y - copy the selected file or directory  
+x - cut the selected file or directory
+p - paste the selected file or directory  
+m - move the selected file or directory      
 
 ### gitsigns
-leader hs - stage hunk   
+[c - Jump to previous git change  
+leader hs - stage hunk  
 leader hr - reset hunk  
+leader hS - stage buffer  
+leader hu - undo stage hunk  
+leader hR - reset buffer  
 leader hp - preview hunk  
-leader hd - diff
+leader hb - blame line  
+leader hd - diff against index
 
 ### LSP
 K - vim.lsp.buf.hover  
@@ -20,8 +32,10 @@ leader gr - vim.lsp.buf.references
 leader ca - vim.lsp.buf.code_action  
 
 ### Telescope
-C + p - builtin.find_files  
-leader fg - builtin.live_grep
+leader sf - builtin.find_files  
+leader ss - builtin.builtin  
+leader sw - builtin.grep_string  
+leader sg - builtin.live_grep
 
 
 ## vim-cheat
