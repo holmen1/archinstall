@@ -8,9 +8,7 @@ a - create a new file OR directory. Add a `/` to the end of the name to make a d
 d - delete a file or directory  
 i - show file details in popup window  
 r - rename a file or directory
-b - rename the selected file or directory without the extension  
 y - copy the selected file or directory  
-x - cut the selected file or directory
 p - paste the selected file or directory  
 m - move the selected file or directory      
 
