@@ -3,7 +3,7 @@
 ## Custom keymap
 
 ### neo-tree
-\ - toggle neotree
+leader nt - open neotree
 a - create a new file OR directory. Add a `/` to the end of the name to make a directory  
 d - delete a file or directory  
 i - show file details in popup window  
@@ -34,6 +34,10 @@ leader sf - builtin.find_files
 leader ss - builtin.builtin  
 leader sw - builtin.grep_string  
 leader sg - builtin.live_grep
+
+### Small Terminal (Custom)
+leader st - open terminal
+C-\ C-n - exit terminal mode
 
 
 ## vim-cheat
