@@ -194,6 +194,11 @@ Link
 ```
 $ sudo ln -s /opt/VSCode-linux-x64/bin/code /usr/local/bin/code
 ```
+## Hyprland
+Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor, here configured with Waybar to provide a status bar  
+
+[README](https://github.com/holmen1/archinstall/blob/master/dotfiles/nvim/README.md)
+
 ## kitty
 [README](https://github.com/holmen1/archinstall/blob/desktop/dotfiles/kitty/README.md)
 
