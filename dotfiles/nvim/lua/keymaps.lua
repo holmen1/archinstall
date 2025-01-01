@@ -21,6 +21,13 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Keybinds to resize windows
+-- <C-w>> and <C-w>< are the default keybinds to resize windows, but freezes :( ?
+--vim.keymap.set('n', '<C-S-h>', '<cmd>vertical resize -1<CR>', { desc = 'Resize window left' })
+--vim.keymap.set('n', '<C-S-l>', '<cmd>vertical resize +1<CR>', { desc = 'Resize window right' })
+vim.keymap.set('n', '<C-S-j>', '<C-w>+', { desc = 'Resize window up' })
+vim.keymap.set('n', '<C-S-k>', '<C-w>-', { desc = 'Resize window down' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
