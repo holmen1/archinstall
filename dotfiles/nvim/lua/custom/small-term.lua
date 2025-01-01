@@ -60,23 +60,3 @@ vim.keymap.set('n', '<leader>load', function()
     end
     send_to_terminal(":l " .. filename)
 end, { noremap = true, silent = true, desc = "Load current file in ghci" })
-
--- Keybinding to run the current Haskell file using runghc
-vim.keymap.set('n', '<leader>runghc', function()
-    local filename = get_current_filename()
-    if not is_haskell_file(filename) then
-        print("Warning: Current file is not a Haskell file (.hs)")
-        return
-    end
-    open_terminal("runghc " .. filename)
-end, { noremap = true, silent = true, desc = "Run current Haskell file with runghc" })
-
--- Keybinding to rerun the current Haskell file using runghc
-vim.keymap.set('n', '<leader>rerun', function()
-    local filename = get_current_filename()
-    if not is_haskell_file(filename) then
-        print("Warning: Current file is not a Haskell file (.hs)")
-        return
-    end
-    send_to_terminal("runghc " .. filename)
-end, { noremap = true, silent = true, desc = "Rerun current Haskell file with runghc" })
