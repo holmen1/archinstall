@@ -295,3 +295,19 @@ luastyles: failed to install
 
 ## VirtualBox
 check box: Enable EFI
+
+## Thunar
+Open with nvim "Unable to find terminal"
+
+Edit  
+/usr/share/applications/nvim.desktop like so:
+```
+$ diff nvim.desktop nvim.desktop.bak 
+79,80c79,81
+< Exec=kitty -e nvim %F
+< Terminal=false
+---
+> TryExec=nvim
+> Exec=nvim %F
+> Terminal=true
+```

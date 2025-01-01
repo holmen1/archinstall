@@ -7,7 +7,6 @@ bluez
 bluez-utils
 brightnessctl
 btrfs-progs
-dolphin
 dunst
 efibootmgr
 firefox
@@ -42,6 +41,7 @@ rofi-wayland
 slurp
 smartmontools
 sof-firmware
+thunar
 tree
 ttf-jetbrains-mono-nerd
 unzip

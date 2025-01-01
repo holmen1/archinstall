@@ -162,7 +162,7 @@
     },
     "custom/filemanager": {
         "format": " ",
-        "on-click": "dolphin",
+        "on-click": "thunar",
         "tooltip-format": "Open the filemanager"
     },
     "group/quicklinks": {
