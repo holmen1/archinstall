@@ -1,4 +1,3 @@
-
 vim.api.nvim_create_autocmd('TermOpen', {
     group = vim.api.nvim_create_augroup('custom-term-open', {clear = true}),
     callback = function()
@@ -81,4 +80,3 @@ vim.keymap.set('n', '<leader>rerun', function()
     end
     send_to_terminal("runghc " .. filename)
 end, { noremap = true, silent = true, desc = "Rerun current Haskell file with runghc" })
-
