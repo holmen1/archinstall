@@ -3,7 +3,7 @@
 ## Custom keymap
 
 ### neo-tree
-leader nt - open neotree
+leader nt - open neotree  
 a - create a new file OR directory. Add a `/` to the end of the name to make a directory  
 d - delete a file or directory  
 i - show file details in popup window  
