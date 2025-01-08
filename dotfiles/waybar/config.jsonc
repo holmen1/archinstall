@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/appmenu",
-        "group/quicklinks",
+        //"group/quicklinks",
         "hyprland/window"
     ],
     "modules-center": [
@@ -21,7 +21,7 @@
         "cpu",
         "memory",
         "custom/temperature",
-        "backlight",
+        //"backlight",
         "battery",
         "clock",
         "tray",
