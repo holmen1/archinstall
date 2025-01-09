@@ -9,7 +9,7 @@
     margin-left: 5px;
 }
 .modules-right > widget:last-child > #custom-exit {
-    margin-right: 5px;
+    margin-right: 1px;
 }
 
 window#waybar {
@@ -63,7 +63,7 @@ button:hover {
 #custom-filemanager {
     padding: 0px 0px;
     font-size:16px;
-    color: #97e1ad;
+    color: rgba(151, 225, 173, 0.7);
     background-color: transparent;
 }
 
@@ -78,13 +78,13 @@ button:hover {
     padding: 0px 5px;
     border-radius: 13px;
     background-color: transparent;
-    color: #97e1ad;
+    color: rgba(151, 225, 173, 0.7);
     transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
     color: #3B5323;
-    background: #97e1ad;
+    background: rgba(151, 225, 173, 0.7);
     border-radius: 13px;
     min-width: 30px;
     transition: all 0.3s ease-in-out;
@@ -124,7 +124,7 @@ button:hover {
 }
 
 #power-profiles-daemon {
-    background: #97e1ad;
+    background: rgba(151, 225, 173, 0.7);
     border-radius: 13px;
 }
 #power-profiles-daemon .icon {
@@ -152,14 +152,14 @@ label:focus {
 #disk,
 #backlight,
 #network {
-    background: #97e1ad;
+    background: rgba(151, 225, 173, 0.7);
     padding: 0px 10px;
     border-radius: 13px;
     color: #3B5323;
 }
 
 #clock {
-    background: #97e1ad;
+    background: rgba(151, 225, 173, 0.7);
     padding: 0px 8px;
     border-radius: 13px;
     font-weight: bold;
@@ -211,7 +211,7 @@ label:focus {
     padding: 0px;
     font-size:18px;
     background-color: transparent;
-    color: #97e1ad;
+    color: rgba(150, 0, 0, 0.8); /* Very dark maroon, slightly transparent */
 }
 
 #keyboard-state > label {
