@@ -47,11 +47,11 @@ scipts/link_config.sh
 Find your favorite wallpaper and convert it to png format
 ```bash
 $ yay -S imagemagick
-$ sudo convert fav.jpg wall0.png
+$ convert fav.jpg wall1.png
 ```
 move it to the wallpaper directory
 ```bash
-$ mv wall0.png /usr/share/hypr
+$ mv wall1.png /usr/share/hypr
 ```
 this will replace the default wallpaper wall0.png  
 hypr uses 3 default wallpapers wall0.png, wall1.png, wall2.png
