@@ -166,6 +166,7 @@ return {
             },
           },
         },
+        clangd = {},  -- Add this line for C language server
       }
 
       -- Ensure the servers and tools above are installed
