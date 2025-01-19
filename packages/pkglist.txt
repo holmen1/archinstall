@@ -10,6 +10,7 @@ btrfs-progs
 dunst
 efibootmgr
 firefox
+gdb
 git
 grim
 grub
