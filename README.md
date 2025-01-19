@@ -310,3 +310,26 @@ $ diff vim.desktop vim.desktop.bak
 > Exec=vim %F
 > Terminal=true
 ```
+
+## Automated installation with archinstall
+-Boot from the Arch Linux ISO
+-Connect to the internet
+-Download config.json
+```
+$ curl -O https://github.com/holmen1/archinstall/blob/master/log/config.json
+```
+-Run the installer
+```
+$ archinstall --config config.json
+```
+
+
+
+
+## TODO
+
+
+
+### Install
+* [ ] Install [Mullvad VPN](https://mullvad.net/en/download/linux-app/)
+
