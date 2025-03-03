@@ -1,8 +1,0 @@
-brave-bin
-docker-desktop
-mullvad-vpn-bin
-nerdfetch
-ventoy-bin
-virtualbox-ext-oracle
-yay
-yay-debug
