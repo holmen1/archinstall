@@ -42,6 +42,9 @@ require("lazy-bootstrap")
 -- [[ Configure and install plugins ]]
 require("lazy-plugins")
 
+-- [[ Custom plugins ]]
+require("custom.small-term")
+
 -- DEBUGGING LSP
 -- vim.lsp.set_log_level("debug")
 -- check your logs and the output of :LspInfo

@@ -166,6 +166,12 @@ return {
             },
           },
         },
+        clangd = {
+          cmd = { "clangd" },
+          init_options = {
+            fallbackFlags = { "--std=c89" }
+          }
+        },
       }
 
       -- Ensure the servers and tools above are installed
