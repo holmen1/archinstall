@@ -10,10 +10,6 @@ BASE_DIR="$1"
 
 # Define an array of source and target directories
 links=(
-#    "$BASE_DIR/dotfiles/hypr:~/.config/hypr"
-#    "$BASE_DIR/dotfiles/waybar:~/.config/waybar"
-#    "$BASE_DIR/dotfiles/wlogout:~/.config/wlogout"
-#    "$BASE_DIR/dotfiles/rofi:~/.config/rofi"
     "$BASE_DIR/dotfiles/nvim:~/.config/nvim"
 #    "$BASE_DIR/dotfiles/kitty:~/.config/kitty"
 #    "$BASE_DIR/zsh:~/.config/zsh"

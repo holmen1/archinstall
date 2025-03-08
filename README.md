@@ -35,21 +35,15 @@ otherwise my choice, see [install.log](https://github.com/holmen1/dot-files/blob
 
 
 # Post-installation
-
-## Automation script
-```post_install.sh``` gives you the option [Y/n] to
-
-* configure Git and generate SSH keys
-* install yay
-* install packages from pkglist.txt and foreignpkglist.txt
-* link configuration dotfiles to ~/.config
-
-```
-$ ./post_install.sh
-```
-
 ## Git
+```$ ./gitconfig.sh```
 After you generate an SSH key pair, you must add the public key to GitHub.com to enable SSH access for your account
+
+## Packages
+```$ ./install_packages.sh ~/archinstall/packages/pkglist.txt```
+
+## Dotfiles
+```$ ./link_dotfiles.sh ~/archinstall```
 
 
 ## REPAIR
