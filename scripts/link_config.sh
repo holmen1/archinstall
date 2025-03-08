@@ -15,7 +15,7 @@ links=(
 #    "$BASE_DIR/dotfiles/wlogout:~/.config/wlogout"
 #    "$BASE_DIR/dotfiles/rofi:~/.config/rofi"
     "$BASE_DIR/dotfiles/nvim:~/.config/nvim"
-    "$BASE_DIR/dotfiles/kitty:~/.config/kitty"
+#    "$BASE_DIR/dotfiles/kitty:~/.config/kitty"
 #    "$BASE_DIR/zsh:~/.config/zsh"
 )
 

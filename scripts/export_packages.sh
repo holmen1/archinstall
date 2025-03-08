@@ -4,7 +4,7 @@
 OUTPUT_DIR=~/repos/archinstall/packages
 
 # Export the list of explicitly installed packages
-pacman -Qqetn > "$OUTPUT_DIR/pkglist.txt"
+pacman -Qqen > "$OUTPUT_DIR/pkglist.txt"
 echo "Exported list of explicitly installed packages to $OUTPUT_DIR/pkglist.txt"
 
 # Export the list of foreign packages (e.g., from AUR)
