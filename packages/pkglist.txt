@@ -34,6 +34,7 @@ smartmontools
 sof-firmware
 timeshift
 ttf-jetbrains-mono-nerd
+unzip
 vim
 vulkan-radeon
 wget
