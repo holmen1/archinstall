@@ -1,5 +1,14 @@
 # neovim
 
+Windows
+
+:vs [file_path] - split the screen vertically  
+:sp [file_path] - split the window horizontally  
+Ctrl + w and press h - move to the split window on the left  
+Ctrl + w and press j - move to the split window on the down  
+Ctrl + w and press k - move to the split window on the up  
+Ctrl + w and press l - move to the split window on the right
+
 ## Custom keymap
 
 ### neo-tree
@@ -143,14 +152,6 @@ v motion :w FILENAME - saves the Visually selected lines in file FILENAME
 :r FILENAME - retrieves disk file FILENAME and puts it below the cursor position
 
 
-Windows
-
-:vs [file_path] - split the screen vertically
-:sp [file_path] - split the window horizontally
-Ctrl + w and press h - move to the split window on the left
-Ctrl + w and press j - move to the split window on the down
-Ctrl + w and press k - move to the split window on the up
-Ctrl + w and press l - move to the split window on the right
 
 
 
