@@ -188,6 +188,13 @@ Link
 ```
 $ sudo ln -s /opt/VSCode-linux-x64/bin/code /usr/local/bin/code
 ```
+
+## KDE shortcuts
+Super + Shift + Q: Open terminal
+Super + Shift + C: Close window
+Super + <N>: Switch to desktop <N>
+
+
 ## kitty
 [README](https://github.com/holmen1/archinstall/blob/desktop/dotfiles/kitty/README.md)
 

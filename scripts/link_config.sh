@@ -11,7 +11,7 @@ BASE_DIR="$1"
 # Define an array of source and target directories
 links=(
     "$BASE_DIR/dotfiles/nvim:~/.config/nvim"
-#    "$BASE_DIR/dotfiles/kitty:~/.config/kitty"
+    "$BASE_DIR/dotfiles/kitty:~/.config/kitty"
 #    "$BASE_DIR/zsh:~/.config/zsh"
 )
 
