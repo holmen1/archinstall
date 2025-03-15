@@ -31,7 +31,6 @@ linux-lts
 linux-lts-headers
 man-db
 nano
-neofetch
 neovim
 network-manager-applet
 networkmanager
@@ -50,7 +49,6 @@ timeshift
 ttf-jetbrains-mono-nerd
 unzip
 vim
-virtualbox-host-modules-arch
 wget
 wireless_tools
 wireplumber
