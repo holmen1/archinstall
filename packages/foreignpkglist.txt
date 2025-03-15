@@ -1,0 +1,6 @@
+brave-bin
+docker-desktop
+mullvad-vpn-bin
+nerdfetch
+yay
+yay-debug
