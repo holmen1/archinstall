@@ -4,6 +4,7 @@ base
 base-devel
 btrfs-progs
 dolphin
+dotnet-sdk-8.0
 efibootmgr
 firefox
 git
@@ -12,15 +13,20 @@ grub-btrfs
 gst-plugin-pipewire
 htop
 inotify-tools
+isoimagewriter
 iwd
 kate
 kitty
 konsole
+ktorrent
 less
 libpulse
 linux
 linux-firmware
+linux-headers
 linux-lts
+linux-lts-headers
+man-db
 neovim
 network-manager-applet
 networkmanager
@@ -32,6 +38,7 @@ plasma-meta
 plasma-workspace
 smartmontools
 sof-firmware
+stylua
 timeshift
 ttf-jetbrains-mono-nerd
 unzip
