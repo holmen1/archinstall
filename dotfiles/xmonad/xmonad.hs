@@ -244,7 +244,7 @@ myLogHook = return ()
 --
 -- By default, do nothing.
 myStartupHook = do
-	spawn "xmobar ~/.config/xmobar/xmobarrc" -- Launch xmobar with your configuration file
+        spawn "xmobar ~/.config/xmobar/xmobarrc" -- Launch xmobar with your configuration file
 
 
 ------------------------------------------------------------------------
