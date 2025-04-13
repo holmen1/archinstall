@@ -243,7 +243,9 @@ myLogHook = return ()
 -- per-workspace layout choices.
 --
 -- By default, do nothing.
-myStartupHook = return ()
+myStartupHook = do
+	spawn "xmobar ~/.config/xmobar/xmobarrc" -- Launch xmobar with your configuration file
+
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
