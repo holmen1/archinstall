@@ -2,11 +2,24 @@ import XMonad
 import XMonad.Util.EZConfig
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.Magnifier
+import XMonad.Hooks.EwmhDesktops
 
+main :: IO ()
+main = xmonad $ ewmhFullscreen $ ewmh $ myConfig
 
 myTerminal      = "kitty"
 myModMask       = mod4Mask -- Rebind Mod to the Super key
 
+myConfig = def
+    { modMask    = mod4Mask,  -- Rebind Mod to the Super key
+      terminal = myTerminal,
+      layoutHook = myLayout  -- Use custom layouts
+    }
+  `additionalKeysP`
+    [ ("M-S-z", spawn "xscreensaver-command -lock")
+    , ("M-C-s", unGrab *> spawn "scrot -s"        )
+    , ("M-f"  , spawn "firefox"                   )
+    ]
 
 myLayout = tiled ||| Mirror tiled ||| Full ||| threeCol
   where
@@ -17,18 +30,6 @@ myLayout = tiled ||| Mirror tiled ||| Full ||| threeCol
     delta    = 3/100  -- Percent of screen to increment by when resizing panes
 
 
-
-main :: IO ()
-main = xmonad $ def {
-        terminal = myTerminal,
-        modMask = mod4Mask,
-        layoutHook = myLayout  
-    }
-  `additionalKeysP`
-    [ ("M-S-z", spawn "xscreensaver-command -lock")
-    , ("M-C-s", unGrab *> spawn "scrot -s"        )
-    , ("M-f"  , spawn "firefox"                   )
-    ]
 
     -- Toggle the status bar gap
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
