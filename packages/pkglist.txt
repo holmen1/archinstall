@@ -24,6 +24,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 rofi
+scrot
 trayer
 vim
 vulkan-intel
