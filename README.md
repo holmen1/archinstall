@@ -52,6 +52,7 @@ otherwise my choice, see [install.log](https://github.com/holmen1/dot-files/blob
 $ ln -s ~/repos/archinstall/dotfiles/xmonad ~/.config/xmonad
 $ ln -s ~/repos/archinstall/dotfiles/xmobar ~/.config/xmobar
 $ ln -s ~/repos/archinstall/dotfiles/.xinitrc ~/.xinitrc
+$ ln -s ~/repos/archinstall/dotfiles/.bashrc ~/.bashrc
 ```
 
 ## Git
