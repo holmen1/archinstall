@@ -7,7 +7,6 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
 import XMonad.Util.Loggers
---import XMonad.Hooks.FadeInactive
 import XMonad.Hooks.FadeWindows
 
 
@@ -24,6 +23,7 @@ main = xmonad
 
 myTerminal      = "kitty"
 myModMask       = mod4Mask -- Rebind Mod to the Super key
+myFocusedBorderColor = "#ff79c6"
 
 myXmobarPP :: PP
 myXmobarPP = def
@@ -56,6 +56,7 @@ myXmobarPP = def
 myConfig = def
     { modMask    = mod4Mask,  -- Rebind Mod to the Super key
       terminal = myTerminal,
+      focusedBorderColor = myFocusedBorderColor,
       layoutHook = myLayout,  -- Use custom layouts
       logHook = fadeWindowsLogHook myFadeHook,
       handleEventHook = fadeWindowsEventHook
@@ -74,15 +75,4 @@ myLayout = tiled ||| Mirror tiled ||| Full ||| threeCol
     ratio    = 1/2    -- Default proportion of screen occupied by master pane
     delta    = 3/100  -- Percent of screen to increment by when resizing panes
 
-myFadeHook = composeAll [ isUnfocused --> transparency 0.2, opaque ]
-
-
-    -- Toggle the status bar gap
-    -- Use this binding with avoidStruts from Hooks.ManageDocks.
-    -- See also the statusBar function from Hooks.DynamicLog.
-    --
-    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
-
-
-    -- Restart xmonad
-    --, ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
+myFadeHook = composeAll [ opaque, isUnfocused --> transparency 0.8 ]

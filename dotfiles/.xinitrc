@@ -22,4 +22,7 @@ if [ -x /usr/bin/nm-applet ] ; then
    nm-applet --sm-disable &
 fi
 
+# Compositor for opacity
+xcompmgr &
+
 exec xmonad

@@ -137,6 +137,8 @@ xmonad is a tiling window manager for X. Windows are arranged automatically to t
 
 # LESSONS LEARNED
 
+## Opacity
+Need xcompmgr for fadeWindowsLogHook to work
 
 ## lspconfig
 ```
