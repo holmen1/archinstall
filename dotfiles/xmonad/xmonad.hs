@@ -7,7 +7,8 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
 import XMonad.Util.Loggers
-
+--import XMonad.Hooks.FadeInactive
+import XMonad.Hooks.FadeWindows
 
 
 main :: IO ()
@@ -55,7 +56,9 @@ myXmobarPP = def
 myConfig = def
     { modMask    = mod4Mask,  -- Rebind Mod to the Super key
       terminal = myTerminal,
-      layoutHook = myLayout  -- Use custom layouts
+      layoutHook = myLayout,  -- Use custom layouts
+      logHook = fadeWindowsLogHook myFadeHook,
+      handleEventHook = fadeWindowsEventHook
     }
   `additionalKeysP`
     [ ("M-S-z", spawn "xscreensaver-command -lock")
@@ -71,6 +74,7 @@ myLayout = tiled ||| Mirror tiled ||| Full ||| threeCol
     ratio    = 1/2    -- Default proportion of screen occupied by master pane
     delta    = 3/100  -- Percent of screen to increment by when resizing panes
 
+myFadeHook = composeAll [ transparency 0.9, isUnfocused --> transparency 0.2 ]
 
 
     -- Toggle the status bar gap
