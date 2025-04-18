@@ -36,8 +36,7 @@ otherwise my choice, see [install.log](https://github.com/holmen1/dot-files/blob
 
 # Post-installation
 
-## Automation script
-```post_install.sh``` gives you the option [Y/n] to
+## Automation scripts
 
 * configure Git and generate SSH keys
 ```
@@ -122,10 +121,11 @@ Link
 ```
 $ sudo ln -s /opt/VSCode-linux-x64/bin/code /usr/local/bin/code
 ```
-## Hyprland
-Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor, here configured with Waybar to provide a status bar  
+## Xmonad
+xmonad is a tiling window manager for X. Windows are arranged automatically to tile the screen without gaps or overlap, maximizing screen use
+, here configured with xmobar to provide a status bar  
 
-[README](https://github.com/holmen1/archinstall/blob/master/dotfiles/hypr/README.md)
+[README](https://github.com/holmen1/archinstall/blob/xmonad/dotfiles/xmonad/README.md)
 
 ## kitty
 [README](https://github.com/holmen1/archinstall/blob/desktop/dotfiles/kitty/README.md)
