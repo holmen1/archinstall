@@ -74,7 +74,7 @@ myLayout = tiled ||| Mirror tiled ||| Full ||| threeCol
     ratio    = 1/2    -- Default proportion of screen occupied by master pane
     delta    = 3/100  -- Percent of screen to increment by when resizing panes
 
-myFadeHook = composeAll [ transparency 0.9, isUnfocused --> transparency 0.2 ]
+myFadeHook = composeAll [ isUnfocused --> transparency 0.2, opaque ]
 
 
     -- Toggle the status bar gap
