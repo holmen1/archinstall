@@ -29,8 +29,8 @@ root@archiso ~ # archinstall
 ```
 
 Note, set  
-"bootloader": "Grub"
-since we will use grub-btrfs later
+"profile": "Xorg"
+
 otherwise my choice, see [install.log](https://github.com/holmen1/dot-files/blob/master/log/install.log)  
 
 
@@ -40,12 +40,19 @@ otherwise my choice, see [install.log](https://github.com/holmen1/dot-files/blob
 ```post_install.sh``` gives you the option [Y/n] to
 
 * configure Git and generate SSH keys
-* install yay
+```
+./scripts/gitconfig.sh
+```
 * install packages from pkglist.txt and foreignpkglist.txt
+```
+./scripts/install_packages.sh
+```
 * link configuration dotfiles to ~/.config
 
 ```
-$ ./post_install.sh
+$ ln -s ~/repos/archinstall/dotfiles/xmonad ~/.config/xmonad
+$ ln -s ~/repos/archinstall/dotfiles/xmobar ~/.config/xmobar
+$ ln -s ~/repos/archinstall/dotfiles/.xinitrc ~/.xinitrc
 ```
 
 ## Git
@@ -85,85 +92,6 @@ chroot to user
 [root@archiso /]# exit
 # cd /
 # umount --recursive /pa
-```
-
-## DISASTER RECOVERY
-Restore Timehift snapshots with grub-btrfs
-
-Install Timeshift
-```
-$ pacman -S timeshift
-```
-and setup schedule, then enable schedule
-
-```
-$ systemctl enable --now cronie.service
-```
- 
-
-list snaphots
-```
-$ sudo btrfs subvolume list /
-```
-
-ID 278 gen 1830 top level 5 path timeshift-btrfs/snapshots/2024-10-26_13-06-21/@  
-ID 279 gen 1830 top level 5 path timeshift-btrfs/snapshots/2024-10-26_14-12-13/@  
-ID 280 gen 1926 top level 5 path timeshift-btrfs/snapshots/2024-10-26_15-15-43/@
-
-Install grub-btrfs  
-```
-$ sudo pacman -S grub-btrfs
-```
-
-### Manually generate grub snapshot entries
-run
-```
-$ sudo /etc/grub.d/41_snapshots-btrfs
-```
-which updates grub-btrfs.cfg  
-
-You then need to regenerate the GRUB configuration by running the following command
-
-```
-$ sudo grub-mkconfig -o /boot/grub/grub.cfg
-```
-
-### Automatically update grub
-upon snapshot creation or deletion  
-
-By default the daemon is watching the directory /.snapshots. If the daemon should watch a different directory,  
-it can be edited with
-```
-$ sudo systemctl edit --full grub-btrfsd
-```
-
-Set  
-ExecStart=/usr/bin/grub-btrfsd --syslog --timeshift-auto  
-
-That will automatically detect Timeshifts snapshot directory
-
-Also need to monitor changes to the filesystem, and report those changes to applications
-```
-$ sudo pacman -S inotify-tools
-```
-
-Finally activate grub-btrfsd during system startup
-```
-$ sudo systemctl enable grub-btrfsd
-```
-
-## Bluetoth
-```
-$ yay -S blueman bluez-utils
-```
-```
-$ sudo systemctl status bluetooth
-```
-```
-$ sudo systemctl start bluetooth
-```
-```
-$ sudo systemctl enable bluetooth
 ```
 
 
@@ -206,86 +134,9 @@ Hyprland is an independent, highly customizable, dynamic tiling Wayland composit
 [README](https://github.com/holmen1/archinstall/blob/desktop/dotfiles/nvim/README.md)
 
 
-## GitHub Copilot in the CLI
-Get gh binary https://github.com/cli/cli/releases/tag/v2.60.1
-
-```
-$ gh auth login
-```
-```
-$ gh extension install github/gh-copilot
-```
-```
-$ gh copilot explain "sudo pacman -Syu"
-```
-Welcome to GitHub Copilot in the CLI!  
-version 1.0.5 (2024-09-12)  
-
-I'm powered by AI, so surprises and mistakes are possible. Make sure to verify any generated code or suggestions, and share feedback so that we can learn and improve. For more information, see https://gh.io/gh-copilot-transparency
-
-Explanation:                                                                      
-                                                                                  
-  • sudo is used to run a command with elevated rights.                           
-    • pacman is the package manager used in Arch Linux and its derivatives.       
-      • -Syu is a combination of flags:                                           
-        • -S synchronizes the package databases, updating them to the latest      
-        version.                                                                  
-        • -y automatically answers "yes" to any prompts, allowing the upgrade to  
-        proceed without user intervention.                                        
-        • -u upgrades all installed packages to their latest versions. 
-
-
-## VPN
-$ yay -S mullvad-vpn-bin
 
 # LESSONS LEARNED
 
-## Unable to delete timeshift btrfs snapshot
-
-https://bbs.archlinux.org/viewtopic.php?id=266965
-
-Try
-```
-$ sudo timeshift --delete --snapshot '2024-10-24_01-34-59'
-```
-Deleting subvolume: @ (Id:256)  
-E: ERROR: Could not destroy subvolume/snapshot: Directory not empty
-
-
-```
-$ sudo btrfs subvolume list /
-```
-ID 256 gen 1796 top level 5 path timeshift-btrfs/snapshots/2024-10-24_01-34-59/@  
-ID 257 gen 1830 top level 5 path @home  
-ID 258 gen 1830 top level 5 path @log  
-ID 259 gen 1667 top level 5 path @pkg  
-ID 260 gen 1456 top level 5 path @.snapshots  
-ID 261 gen 17 top level 256 path timeshift-btrfs/snapshots/2024-10-24_01-34-59/@/var/lib/portables  
-ID 262 gen 17 top level 256 path timeshift-btrfs/snapshots/2024-10-24_01-34-59/@/var/lib/machines  
-ID 264 gen 1830 top level 5 path @  
-ID 278 gen 1830 top level 5 path timeshift-btrfs/snapshots/2024-10-26_13-06-21/@  
-ID 279 gen 1830 top level 5 path timeshift-btrfs/snapshots/2024-10-26_14-12-13/@  
-
-Naive attempt
-```
-$ sudo btrfs subvolume delete timeshift-btrfs/snapshots/2024-10-24_01-34-59/@
-```
-ERROR: Could not statfs: No such file or directory
-
-Need full path: /run/timeshift/1555/backup/timeshift-btrfs...
-NB Timeshift need to run to get XXXX above
-
-Delete, beginning with subsubvolumes
-```
-$ sudo btrfs subvolume delete /run/timeshift/1555/backup/timeshift-btrfs/snapshots/2024-10-24_01-34-59/@/var/lib/portables
-$ sudo btrfs subvolume delete /run/timeshift/1555/backup/timeshift-btrfs/snapshots/2024-10-24_01-34-59/@/var/lib/machines
-$ sudo btrfs subvolume delete /run/timeshift/1555/backup/timeshift-btrfs/snapshots/2024-10-24_01-34-59/@
-```
-
-Then delete
-```
-$ sudo timeshift --delete --snapshot '2024-10-24_01-34-59'
-```
 
 ## lspconfig
 ```
@@ -293,23 +144,6 @@ yay -S unzip
 ```
 luastyles: failed to install
 
-## VirtualBox
-check box: Enable EFI
-
-## Thunar
-Open with vim "Unable to find terminal"
-
-Edit  
-/usr/share/applications/nvim.desktop like so:
-```
-$ diff vim.desktop vim.desktop.bak
-112,113c112,113
-< Exec=kitty -e vim %F
-< Terminal=false
----
-> Exec=vim %F
-> Terminal=true
-```
 
 ## Automated installation with archinstall
 -Boot from the Arch Linux ISO
@@ -331,5 +165,7 @@ $ archinstall --config config.json
 
 
 ### Install
-* [ ] Install [Mullvad VPN](https://mullvad.net/en/download/linux-app/)
+* [ ] Network manager
+* [ ] Neovim
+* [ ] Install script
 
