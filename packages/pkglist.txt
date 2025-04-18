@@ -1,4 +1,3 @@
-alsa-utils
 base
 base-devel
 btrfs-progs
