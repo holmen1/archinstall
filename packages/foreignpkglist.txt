@@ -1,4 +1,3 @@
 brave-bin
-docker-desktop
 mullvad-vpn-bin
 yay

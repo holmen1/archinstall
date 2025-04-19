@@ -43,6 +43,8 @@ timeshift
 ttf-jetbrains-mono-nerd
 unzip
 vim
+virtualbox
+virtualbox-host-modules-lts
 vulkan-radeon
 wget
 wireless_tools
