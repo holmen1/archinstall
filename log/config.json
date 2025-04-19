@@ -1,30 +1,27 @@
-{
-    "__separator__": null,
-    "additional-repositories": [],
+ {
     "archinstall-language": "English",
     "audio_config": {
         "audio": "pipewire"
     },
     "bootloader": "Grub",
-    "config_version": "2.8.6",
-    "debug": false,
+    "custom_commands": [],
     "disk_config": {
         "config_type": "default_layout",
         "device_modifications": [
             {
-                "device": "/dev/nvme0n1",
+                "device": "/dev/sda",
                 "partitions": [
                     {
                         "btrfs": [],
                         "dev_path": null,
                         "flags": [
-                            "Boot",
-                            "ESP"
+                            "boot",
+                            "esp"
                         ],
                         "fs_type": "fat32",
                         "mount_options": [],
                         "mountpoint": "/boot",
-                        "obj_id": "e9fadd56-69f9-48ec-a777-158657f828da",
+                        "obj_id": "3bca13ed-844e-4fd0-8c90-cd1b72088c39",
                         "size": {
                             "sector_size": {
                                 "unit": "B",
@@ -74,14 +71,14 @@
                             "compress=zstd"
                         ],
                         "mountpoint": null,
-                        "obj_id": "0cb68dd8-8236-47e7-b6e4-92cf4dab575e",
+                        "obj_id": "cd6de66d-078b-425b-8e6b-df4ff1019b32",
                         "size": {
                             "sector_size": {
                                 "unit": "B",
                                 "value": 512
                             },
                             "unit": "B",
-                            "value": 511034351616
+                            "value": 126960533504
                         },
                         "start": {
                             "sector_size": {
@@ -99,8 +96,7 @@
             }
         ]
     },
-    "disk_encryption": null,
-    "hostname": "thinkpad",
+    "hostname": "11e",
     "kernels": [
         "linux"
     ],
@@ -110,56 +106,57 @@
         "sys_lang": "en_US"
     },
     "mirror_config": {
-        "custom_mirrors": [],
+        "custom_repositories": [],
+        "custom_servers": [],
         "mirror_regions": {
             "Sweden": [
+                "http://ftp.lysator.liu.se/pub/archlinux/$repo/os/$arch",
+                "https://ftp.lysator.liu.se/pub/archlinux/$repo/os/$arch",
                 "http://ftp.myrveln.se/pub/linux/archlinux/$repo/os/$arch",
-                "https://mirror.osbeck.com/archlinux/$repo/os/$arch",
-                "https://mirror.braindrainlan.nu/archlinux/$repo/os/$arch",
                 "https://ftp.myrveln.se/pub/linux/archlinux/$repo/os/$arch",
                 "http://mirror.accum.se/mirror/archlinux/$repo/os/$arch",
                 "https://mirror.accum.se/mirror/archlinux/$repo/os/$arch",
-                "https://mirror.bahnhof.net/pub/archlinux/$repo/os/$arch",
-                "http://mirror.bahnhof.net/pub/archlinux/$repo/os/$arch",
+                "https://mirror.osbeck.com/archlinux/$repo/os/$arch",
                 "http://ftpmirror.infania.net/mirror/archlinux/$repo/os/$arch",
-                "http://ftp.lysator.liu.se/pub/archlinux/$repo/os/$arch",
-                "https://ftp.lysator.liu.se/pub/archlinux/$repo/os/$arch"
+                "http://ftp.ludd.ltu.se/mirrors/archlinux/$repo/os/$arch",
+                "https://ftp.ludd.ltu.se/mirrors/archlinux/$repo/os/$arch",
+                "http://mirror.bahnhof.net/pub/archlinux/$repo/os/$arch",
+                "https://mirror.bahnhof.net/pub/archlinux/$repo/os/$arch",
+                "https://mirror.braindrainlan.nu/archlinux/$repo/os/$arch"
             ]
-        }
+        },
+        "optional_repositories": []
     },
     "network_config": {
-        "type": "iso"
+        "type": "nm"
     },
-    "no_pkg_lookups": false,
     "ntp": true,
-    "offline": false,
     "packages": [
         "git",
-        "vim"
+        "vim",
+        "kitty",
+        "xmonad",
+        "xmonad-contrib",
+        "xmobar",
+        "feh",
+        "scrot",
+        "trayer",
+        "xfce4-power-manager",
+        "xscreensaver",
+        "xcompmgr"
     ],
-    "parallel downloads": 0,
+    "parallel_downloads": 0,
     "profile_config": {
-        "gfx_driver": "AMD / ATI (open-source)",
-        "greeter": "ly",
+        "gfx_driver": "All open-source",
+        "greeter": null,
         "profile": {
-            "custom_settings": {
-                "Hyprland": {
-                    "seat_access": "polkit"
-                }
-            },
-            "details": [
-                "Hyprland"
-            ],
-            "main": "Desktop"
+            "custom_settings": {},
+            "details": [],
+            "main": "Xorg"
         }
     },
-    "save_config": null,
-    "script": "guided",
-    "silent": false,
-    "skip_ntp": false,
-    "skip_version_check": false,
+    "services": [],
     "swap": true,
     "timezone": "Europe/Stockholm",
-    "uki": false,
-    "version": "2.8.6"
+    "version": null
 }
